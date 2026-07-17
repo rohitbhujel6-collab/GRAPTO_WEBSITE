@@ -1,19 +1,8 @@
-/* ======================================================
-   GRAPTO WEBSITE
-   Premium Corporate Theme
-   Part 1 of 6
-====================================================== */
-
-/* ===============================
-   GOOGLE FONTS
-================================= */
-
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
-
-
-/* ===============================
-   RESET
-================================= */
+/* ===================================================
+   GRAPTO WEBSITE V2
+   Part 1
+   Global + Header + Hero
+=================================================== */
 
 *{
 margin:0;
@@ -28,53 +17,26 @@ scroll-behavior:smooth;
 body{
 
 font-family:'Inter',sans-serif;
-
-background:#F8FAFC;
-
-color:#1E293B;
-
+background:#ffffff;
+color:#1f2937;
+line-height:1.7;
 overflow-x:hidden;
 
-line-height:1.7;
-
-font-size:16px;
-
 }
-
-
-/* ===============================
-   IMAGES
-================================= */
 
 img{
 
+max-width:100%;
 display:block;
 
-width:100%;
-
-height:auto;
-
 }
-
-
-/* ===============================
-   LINKS
-================================= */
 
 a{
 
 text-decoration:none;
-
 color:inherit;
 
-transition:.35s;
-
 }
-
-
-/* ===============================
-   LIST
-================================= */
 
 ul{
 
@@ -82,41 +44,28 @@ list-style:none;
 
 }
 
-
-/* ===============================
-   CONTAINER
-================================= */
-
 .container{
 
-width:min(92%,1220px);
-
+width:min(1200px,92%);
 margin:auto;
 
 }
 
 
-/* ===============================
-   SECTIONS
-================================= */
 
-.section{
+/* ============================
+SECTION SPACING
+============================ */
+
+section{
 
 padding:110px 0;
 
-position:relative;
-
 }
-
-
-/* ===============================
-   SECTION HEADER
-================================= */
 
 .section-header{
 
 text-align:center;
-
 margin-bottom:70px;
 
 }
@@ -124,21 +73,13 @@ margin-bottom:70px;
 .section-tag{
 
 display:inline-block;
-
-padding:10px 18px;
-
-border-radius:999px;
-
-background:#DFF6EF;
-
-color:#0B8F6A;
-
-font-size:13px;
-
+padding:8px 18px;
+border-radius:40px;
+background:#e7f8f2;
+color:#0b8f6a;
+font-size:.85rem;
 font-weight:700;
-
-letter-spacing:2px;
-
+letter-spacing:1px;
 margin-bottom:18px;
 
 }
@@ -146,274 +87,208 @@ margin-bottom:18px;
 .section-header h2{
 
 font-family:'Poppins',sans-serif;
-
-font-size:48px;
-
-line-height:1.2;
-
+font-size:2.6rem;
+font-weight:700;
+color:#0f172a;
 margin-bottom:18px;
-
-color:#0F172A;
 
 }
 
 .section-header p{
 
 max-width:760px;
-
 margin:auto;
-
-font-size:18px;
-
-color:#64748B;
+font-size:1.08rem;
+color:#64748b;
 
 }
 
 
-/* ===============================
-   BUTTONS
-================================= */
+
+/* ============================
+BUTTONS
+============================ */
 
 .btn{
 
 display:inline-flex;
-
 align-items:center;
-
 justify-content:center;
-
-padding:16px 34px;
-
-border-radius:999px;
-
-font-weight:700;
-
+padding:15px 34px;
+border-radius:50px;
+font-weight:600;
 transition:.35s;
-
 cursor:pointer;
 
 }
 
 .btn-primary{
 
-background:#0F172A;
-
-color:#ffffff;
-
-box-shadow:0 18px 40px rgba(15,23,42,.18);
+background:#0b8f6a;
+color:#fff;
 
 }
 
 .btn-primary:hover{
 
-background:#123C69;
-
-transform:translateY(-4px);
+background:#08775a;
+transform:translateY(-3px);
 
 }
 
 .btn-secondary{
 
-background:#0B8F6A;
-
-color:#ffffff;
+background:#fff;
+color:#0f172a;
+border:2px solid #dbe4ea;
 
 }
 
 .btn-secondary:hover{
 
-background:#097556;
-
-transform:translateY(-4px);
+background:#f5f7fa;
+transform:translateY(-3px);
 
 }
 
 
-/* ===============================
-   HEADER
-================================= */
+
+/* ============================
+HEADER
+============================ */
 
 header{
 
 position:fixed;
-
 top:0;
-
 left:0;
-
 width:100%;
-
-z-index:1000;
-
-background:rgba(15,23,42,.92);
-
-backdrop-filter:blur(16px);
-
-border-bottom:1px solid rgba(255,255,255,.08);
+background:#0f172a;
+z-index:999;
+box-shadow:0 8px 30px rgba(0,0,0,.08);
 
 }
-
-
-/* ===============================
-   NAVIGATION
-================================= */
 
 nav{
 
-height:90px;
-
+height:82px;
 display:flex;
-
 align-items:center;
-
 justify-content:space-between;
-
-}
-
-.logo{
-
-display:flex;
-
-align-items:center;
-
-gap:14px;
 
 }
 
 .logo img{
 
-width:58px;
-
-}
-
-.logo h2{
-
-font-family:'Poppins',sans-serif;
-
-color:#ffffff;
-
-font-size:30px;
+height:58px;
 
 }
 
 .menu{
 
 display:flex;
-
-gap:34px;
+gap:38px;
 
 }
 
 .menu a{
 
 color:#ffffff;
-
-font-weight:600;
-
-position:relative;
+font-weight:500;
+transition:.3s;
 
 }
 
 .menu a:hover{
 
-color:#38BDF8;
-
-}
-
-.menu a::after{
-
-content:"";
-
-position:absolute;
-
-left:0;
-
-bottom:-8px;
-
-width:0;
-
-height:2px;
-
-background:#38BDF8;
-
-transition:.3s;
-
-}
-
-.menu a:hover::after{
-
-width:100%;
+color:#34d399;
 
 }
 
 
-/* ===============================
-   HERO
-================================= */
+
+/* ============================
+HERO
+============================ */
 
 .hero{
 
-min-height:100vh;
-
-display:flex;
-
-align-items:center;
-
-background:
-linear-gradient(rgba(15,23,42,.72),rgba(15,23,42,.78)),
-url("../images/hero.jpg");
-
-background-size:cover;
-
-background-position:center;
-
-color:#ffffff;
-
-padding-top:120px;
+padding-top:170px;
+padding-bottom:110px;
+background:#f8fafc;
 
 }
 
-.hero-content{
+.hero-grid{
 
-max-width:720px;
+display:grid;
+grid-template-columns:1fr 1fr;
+align-items:center;
+gap:70px;
+
+}
+
+.hero-tag{
+
+display:inline-block;
+background:#dcfce7;
+color:#0b8f6a;
+padding:10px 20px;
+border-radius:50px;
+font-weight:600;
+margin-bottom:24px;
 
 }
 
 .hero h1{
 
 font-family:'Poppins',sans-serif;
-
-font-size:68px;
-
-line-height:1.1;
-
-margin-bottom:26px;
+font-size:4rem;
+line-height:1.15;
+color:#0f172a;
+margin-bottom:28px;
 
 }
 
 .hero p{
 
-font-size:20px;
-
-color:#E2E8F0;
-
+font-size:1.12rem;
+color:#64748b;
 margin-bottom:38px;
-
-max-width:650px;
 
 }
 
 .hero-buttons{
 
 display:flex;
-
-gap:18px;
-
+gap:20px;
 flex-wrap:wrap;
 
-}/* ======================================================
-   ABOUT SECTION
-====================================================== */
+}
+
+.hero-image{
+
+border-radius:24px;
+overflow:hidden;
+box-shadow:0 25px 60px rgba(0,0,0,.15);
+
+}
+
+.hero-image img{
+
+width:100%;
+height:100%;
+object-fit:cover;
+
+}/* ===================================================
+   PART 2
+   ABOUT + SERVICES
+=================================================== */
+
+
+/*============================
+ABOUT
+============================*/
 
 .about{
 
@@ -424,11 +299,8 @@ background:#ffffff;
 .about-grid{
 
 display:grid;
-
-grid-template-columns:1.2fr 1fr;
-
-gap:70px;
-
+grid-template-columns:1.1fr .9fr;
+gap:60px;
 align-items:center;
 
 }
@@ -436,23 +308,17 @@ align-items:center;
 .about-content{
 
 display:grid;
-
-gap:30px;
+gap:25px;
 
 }
 
 .info-card{
 
 background:#ffffff;
-
 padding:35px;
-
-border-radius:22px;
-
-border:1px solid #E5E7EB;
-
-box-shadow:0 15px 40px rgba(15,23,42,.06);
-
+border-radius:20px;
+border:1px solid #e5e7eb;
+box-shadow:0 10px 30px rgba(15,23,42,.06);
 transition:.35s;
 
 }
@@ -460,84 +326,64 @@ transition:.35s;
 .info-card:hover{
 
 transform:translateY(-8px);
-
-box-shadow:0 22px 60px rgba(15,23,42,.12);
-
-border-color:#0B8F6A;
+box-shadow:0 20px 45px rgba(15,23,42,.12);
 
 }
 
 .info-card h3{
 
-font-family:'Poppins',sans-serif;
-
-font-size:28px;
-
-margin-bottom:16px;
-
-color:#0F172A;
+font-size:1.45rem;
+margin-bottom:15px;
+color:#0f172a;
 
 }
 
 .info-card p{
 
-font-size:17px;
-
-color:#64748B;
-
+color:#64748b;
 line-height:1.8;
 
 }
 
+
+
+/*============================
+IMAGE PLACEHOLDER
+============================*/
+
 .image-placeholder{
 
 position:relative;
-
 overflow:hidden;
-
 border-radius:24px;
-
-background:#EEF2F7;
-
-min-height:520px;
-
-display:flex;
-
-align-items:center;
-
-justify-content:center;
-
-box-shadow:0 20px 60px rgba(15,23,42,.12);
+box-shadow:0 25px 60px rgba(15,23,42,.12);
 
 }
 
 .image-placeholder img{
 
 width:100%;
-
-height:100%;
-
+height:600px;
 object-fit:cover;
+display:block;
 
 }
 
 .admin-note{
 
 position:absolute;
-
-bottom:20px;
-
 left:20px;
+bottom:20px;
 
 background:rgba(15,23,42,.82);
 
-color:#ffffff;
+color:#fff;
 
 padding:10px 18px;
 
-border-radius:50px;
+border-radius:30px;
 
-font-size:13px;
+font-size:.85rem;
 
 font-weight:600;
 
@@ -546,13 +392,18 @@ backdrop-filter:blur(10px);
 }
 
 
-/* ======================================================
-   SERVICES
-====================================================== */
+
+/*============================
+SERVICES
+============================*/
 
 .services{
 
-background:#F8FAFC;
+background:#f8fafc;
+
+border-top:1px solid #edf2f7;
+
+border-bottom:1px solid #edf2f7;
 
 }
 
@@ -562,7 +413,7 @@ display:grid;
 
 grid-template-columns:repeat(3,1fr);
 
-gap:32px;
+gap:30px;
 
 }
 
@@ -570,15 +421,15 @@ gap:32px;
 
 background:#ffffff;
 
-padding:40px;
+padding:38px;
 
-border-radius:24px;
+border-radius:22px;
 
-border:1px solid #E5E7EB;
-
-box-shadow:0 15px 45px rgba(15,23,42,.06);
+border:1px solid #e5e7eb;
 
 transition:.35s;
+
+box-shadow:0 10px 30px rgba(15,23,42,.05);
 
 position:relative;
 
@@ -600,13 +451,13 @@ width:100%;
 
 height:5px;
 
-background:linear-gradient(90deg,#0B8F6A,#123C69);
+background:#0b8f6a;
 
 transform:scaleX(0);
 
-transform-origin:left;
-
 transition:.35s;
+
+transform-origin:left;
 
 }
 
@@ -620,36 +471,72 @@ transform:scaleX(1);
 
 transform:translateY(-10px);
 
-box-shadow:0 30px 70px rgba(15,23,42,.15);
+box-shadow:0 25px 60px rgba(15,23,42,.12);
 
 }
 
 .service-card h3{
 
-font-family:'Poppins',sans-serif;
-
-font-size:26px;
+font-size:1.35rem;
 
 margin-bottom:18px;
 
-color:#0F172A;
+color:#0f172a;
 
 }
 
 .service-card p{
 
-color:#64748B;
-
-font-size:17px;
+color:#64748b;
 
 line-height:1.8;
 
 }
 
 
-/* ======================================================
-   INDUSTRIES
-====================================================== */
+
+/*============================
+SECTION SEPARATORS
+============================*/
+
+.about,
+.services{
+
+position:relative;
+
+}
+
+.about::after,
+.services::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:0;
+
+transform:translateX(-50%);
+
+width:120px;
+
+height:4px;
+
+border-radius:50px;
+
+background:#0b8f6a22;
+
+}/* ===================================================
+   PART 3
+   INDUSTRIES + EMPLOYERS + CANDIDATES
+===================================================*/
+
+
+
+/*============================
+INDUSTRIES
+============================*/
 
 .industries{
 
@@ -661,287 +548,80 @@ background:#ffffff;
 
 display:grid;
 
-grid-template-columns:repeat(4,1fr);
+grid-template-columns:repeat(3,1fr);
 
-gap:28px;
-
-margin-top:30px;
+gap:30px;
 
 }
 
 .industry-card{
 
-background:linear-gradient(135deg,#0F172A,#123C69);
-
-color:#ffffff;
-
-padding:40px 20px;
+background:#ffffff;
 
 border-radius:22px;
 
-text-align:center;
+overflow:hidden;
 
-font-family:'Poppins',sans-serif;
+border:1px solid #e5e7eb;
 
-font-size:22px;
-
-font-weight:600;
+box-shadow:0 10px 25px rgba(15,23,42,.06);
 
 transition:.35s;
-
-cursor:pointer;
-
-box-shadow:0 15px 45px rgba(15,23,42,.15);
 
 }
 
 .industry-card:hover{
 
-transform:translateY(-10px) scale(1.03);
-
-background:linear-gradient(135deg,#0B8F6A,#123C69);
-
-}
-
-.future-note{
-
-text-align:center;
-
-margin-top:40px;
-
-font-size:16px;
-
-color:#64748B;
-
-font-style:italic;
-
-}/* ======================================================
-   WHY CHOOSE GRAPTO
-====================================================== */
-
-.why{
-background:#F8FAFC;
-}
-
-.why-grid{
-display:grid;
-grid-template-columns:repeat(4,1fr);
-gap:30px;
-margin-top:20px;
-}
-
-.why-card{
-background:#ffffff;
-padding:40px 30px;
-border-radius:24px;
-text-align:center;
-border:1px solid #E5E7EB;
-box-shadow:0 18px 50px rgba(15,23,42,.06);
-transition:.35s;
-position:relative;
-overflow:hidden;
-}
-
-.why-card::before{
-content:"";
-position:absolute;
-top:0;
-left:0;
-width:100%;
-height:5px;
-background:linear-gradient(90deg,#123C69,#0B8F6A);
-transform:scaleX(0);
-transform-origin:left;
-transition:.35s;
-}
-
-.why-card:hover::before{
-transform:scaleX(1);
-}
-
-.why-card:hover{
-transform:translateY(-12px);
-box-shadow:0 28px 65px rgba(15,23,42,.15);
-}
-
-.why-card h3{
-font-family:'Poppins',sans-serif;
-font-size:24px;
-margin-bottom:18px;
-color:#0F172A;
-}
-
-.why-card p{
-color:#64748B;
-font-size:16px;
-line-height:1.8;
-}
-
-
-/* ======================================================
-   CORE VALUES
-====================================================== */
-
-.values{
-background:#ffffff;
-}
-
-.values-grid{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-gap:30px;
-margin-top:25px;
-}
-
-.value-card{
-background:#ffffff;
-padding:45px 35px;
-text-align:center;
-border-radius:24px;
-border:1px solid #E5E7EB;
-box-shadow:0 18px 50px rgba(15,23,42,.06);
-transition:.35s;
-}
-
-.value-card:hover{
 transform:translateY(-10px);
-box-shadow:0 30px 70px rgba(15,23,42,.15);
-border-color:#0B8F6A;
+
+box-shadow:0 25px 60px rgba(15,23,42,.12);
+
 }
 
-.value-card h1{
-font-family:'Poppins',sans-serif;
-font-size:64px;
-color:#0B8F6A;
-margin-bottom:15px;
+.industry-card img{
+
+width:100%;
+
+height:220px;
+
+object-fit:cover;
+
 }
 
-.value-card h3{
-font-family:'Poppins',sans-serif;
-font-size:26px;
-margin-bottom:18px;
-color:#0F172A;
+.industry-card h3{
+
+padding:25px 25px 10px;
+
+font-size:1.35rem;
+
+color:#0f172a;
+
 }
 
-.value-card p{
-color:#64748B;
+.industry-card p{
+
+padding:0 25px 30px;
+
+color:#64748b;
+
 line-height:1.8;
-}
-
-
-/* ======================================================
-   SIMPLE FADE ANIMATIONS
-====================================================== */
-
-.service-card,
-.info-card,
-.industry-card,
-.why-card,
-.value-card{
-
-animation:fadeUp .8s ease both;
-
-}
-
-@keyframes fadeUp{
-
-0%{
-opacity:0;
-transform:translateY(40px);
-}
-
-100%{
-opacity:1;
-transform:translateY(0);
-}
 
 }
 
 
-/* ======================================================
-   PREMIUM HOVER EFFECTS
-====================================================== */
 
-.info-card,
-.service-card,
-.industry-card,
-.why-card,
-.value-card{
+/*============================
+EMPLOYERS
+============================*/
 
-transition:
-transform .35s ease,
-box-shadow .35s ease,
-border-color .35s ease;
+.employers{
 
-}
+background:#f5f9ff;
 
-.section-header h2{
+border-top:1px solid #e7eef7;
 
-background:linear-gradient(90deg,#0F172A,#123C69);
+border-bottom:1px solid #e7eef7;
 
--webkit-background-clip:text;
-
--webkit-text-fill-color:transparent;
-
-}
-
-
-/* ======================================================
-   SPACING IMPROVEMENTS
-====================================================== */
-
-.about,
-.services,
-.industries,
-.why,
-.values{
-
-position:relative;
-overflow:hidden;
-
-}
-
-.about::after,
-.services::after,
-.industries::after{
-
-content:"";
-
-position:absolute;
-
-right:-120px;
-
-top:-120px;
-
-width:260px;
-
-height:260px;
-
-background:rgba(11,143,106,.05);
-
-border-radius:50%;
-
-filter:blur(20px);
-
-pointer-events:none;
-
-}/* ======================================================
-   EMPLOYERS | CANDIDATES | PARTNERS
-====================================================== */
-
-.employers,
-.candidates,
-.partners{
-padding:120px 0;
-background:#F8FAFC;
-}
-
-.candidates{
-background:#ffffff;
-}
-
-.partner{
-background:#F8FAFC;
 }
 
 .employer-grid{
@@ -950,58 +630,21 @@ display:grid;
 
 grid-template-columns:1fr 1fr;
 
-align-items:center;
-
 gap:70px;
 
-}
-
-.employer-content h2{
-
-font-family:'Poppins',sans-serif;
-
-font-size:48px;
-
-color:#0F172A;
-
-line-height:1.2;
-
-margin:20px 0;
+align-items:center;
 
 }
-
-.employer-content p{
-
-font-size:18px;
-
-color:#64748B;
-
-line-height:1.9;
-
-margin-bottom:35px;
-
-max-width:560px;
-
-}
-
-
-/* ===========================
-IMAGE AREA
-=========================== */
 
 .employer-image{
 
 position:relative;
 
+border-radius:24px;
+
 overflow:hidden;
 
-border-radius:28px;
-
-box-shadow:0 25px 60px rgba(15,23,42,.15);
-
-transition:.45s;
-
-background:#EEF2F7;
+box-shadow:0 20px 55px rgba(15,23,42,.12);
 
 }
 
@@ -1013,219 +656,391 @@ height:520px;
 
 object-fit:cover;
 
-transition:.6s;
+}
+
+.employer-content h2{
+
+font-size:2.6rem;
+
+margin:20px 0;
+
+color:#0f172a;
 
 }
 
-.employer-image:hover img{
+.employer-content p{
 
-transform:scale(1.08);
+font-size:1.08rem;
 
-}
+line-height:1.9;
 
-.employer-image:hover{
+color:#64748b;
 
-transform:translateY(-12px);
-
-box-shadow:0 40px 80px rgba(15,23,42,.22);
-
-}
-
-
-/* ===========================
-ADMIN NOTE
-=========================== */
-
-.admin-note{
-
-position:absolute;
-
-bottom:20px;
-
-left:20px;
-
-padding:10px 18px;
-
-background:rgba(15,23,42,.88);
-
-color:#ffffff;
-
-border-radius:999px;
-
-font-size:13px;
-
-font-weight:600;
-
-backdrop-filter:blur(12px);
+margin-bottom:35px;
 
 }
 
 
-/* ===========================
-CTA BUTTONS
-=========================== */
 
-.employer-content .btn{
+/*============================
+CANDIDATES
+============================*/
 
-padding:18px 42px;
-
-font-size:16px;
-
-font-weight:700;
-
-border-radius:999px;
-
-box-shadow:0 18px 45px rgba(15,23,42,.18);
-
-}
-
-.employer-content .btn:hover{
-
-transform:translateY(-5px);
-
-}
-
-
-/* ===========================
-IMAGE LINK
-=========================== */
-
-.employer-image a{
-
-display:block;
-
-height:100%;
-
-}
-
-
-/* ===========================
-SECTION BACKGROUND
-=========================== */
-
-.employers::before,
-.partners::before{
-
-content:"";
-
-position:absolute;
-
-right:-180px;
-
-top:-150px;
-
-width:420px;
-
-height:420px;
-
-background:rgba(11,143,106,.05);
-
-border-radius:50%;
-
-filter:blur(40px);
-
-pointer-events:none;
-
-}
-
-.candidates::before{
-
-content:"";
-
-position:absolute;
-
-left:-180px;
-
-bottom:-150px;
-
-width:420px;
-
-height:420px;
-
-background:rgba(18,60,105,.05);
-
-border-radius:50%;
-
-filter:blur(40px);
-
-pointer-events:none;
-
-}
-
-
-/* ===========================
-HOVER EFFECTS
-=========================== */
-
-.employer-content{
-
-animation:fadeUp .9s ease both;
-
-}
-
-.employer-image{
-
-animation:fadeUp .9s ease both;
-
-}
-
-
-/* ===========================
-SECTION TAG
-=========================== */
-
-.employer-content .section-tag{
-
-margin-bottom:10px;
-
-}
-
-
-/* ===========================
-SMALL TEXT
-=========================== */
-
-.employer-content small{
-
-display:block;
-
-margin-top:15px;
-
-font-size:14px;
-
-color:#94A3B8;
-
-}
-
-
-/* ===========================
-CTA CARD LOOK
-=========================== */
-
-.employer-content{
-
-padding:10px;
-
-}
-
-
-/* ===========================
-IMAGE BORDER
-=========================== */
-
-.employer-image{
-
-border:1px solid rgba(255,255,255,.35);
-
-}/* ======================================================
-   CONTACT SECTION
-====================================================== */
-
-.contact{
+.candidates{
 
 background:#ffffff;
 
+}
+
+.candidates .employer-grid{
+
+align-items:center;
+
+}
+
+
+
+/*============================
+BUTTON IMPROVEMENT
+============================*/
+
+.employer-content .btn{
+
+margin-top:10px;
+
+}
+
+
+
+/*============================
+SECTION DIVIDER
+============================*/
+
+.industries,
+.employers,
+.candidates{
+
 position:relative;
+
+}
+
+.industries::after,
+.employers::after,
+.candidates::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:0;
+
+transform:translateX(-50%);
+
+width:120px;
+
+height:4px;
+
+background:#0b8f6a22;
+
+border-radius:50px;
+
+}
+
+
+
+/*============================
+IMAGE ZOOM EFFECT
+============================*/
+
+.industry-card img,
+.employer-image img{
+
+transition:.5s;
+
+}
+
+.industry-card:hover img,
+.employer-image:hover img{
+
+transform:scale(1.05);
+
+}/* ===================================================
+   PART 4
+   PARTNERS + WHY + VALUES
+===================================================*/
+
+
+/*============================
+PARTNERS
+============================*/
+
+.partners{
+
+background:#f3fbf8;
+border-top:1px solid #e3f3ed;
+border-bottom:1px solid #e3f3ed;
+
+}
+
+.partners .employer-grid{
+
+align-items:center;
+
+}
+
+
+
+/*============================
+WHY GRAPTO
+============================*/
+
+.why{
+
+background:#ffffff;
+
+}
+
+.why-grid{
+
+display:grid;
+grid-template-columns:repeat(2,1fr);
+gap:30px;
+
+}
+
+.why-card{
+
+background:#ffffff;
+
+padding:38px;
+
+border-radius:22px;
+
+border:1px solid #e5e7eb;
+
+box-shadow:0 10px 25px rgba(15,23,42,.05);
+
+transition:.35s;
+
+position:relative;
+
+overflow:hidden;
+
+}
+
+.why-card::before{
+
+content:"";
+
+position:absolute;
+
+left:0;
+top:0;
+
+width:5px;
+height:100%;
+
+background:#0b8f6a;
+
+transform:scaleY(0);
+
+transition:.35s;
+
+transform-origin:top;
+
+}
+
+.why-card:hover::before{
+
+transform:scaleY(1);
+
+}
+
+.why-card:hover{
+
+transform:translateY(-8px);
+
+box-shadow:0 25px 60px rgba(15,23,42,.12);
+
+}
+
+.why-card h3{
+
+font-size:1.35rem;
+
+margin-bottom:18px;
+
+color:#0f172a;
+
+}
+
+.why-card p{
+
+color:#64748b;
+
+line-height:1.8;
+
+}
+
+
+
+/*============================
+VALUES
+============================*/
+
+.values{
+
+background:#f8fafc;
+
+border-top:1px solid #edf2f7;
+
+}
+
+.values-grid{
+
+display:grid;
+
+grid-template-columns:repeat(3,1fr);
+
+gap:30px;
+
+}
+
+.value-card{
+
+background:#ffffff;
+
+padding:40px 30px;
+
+text-align:center;
+
+border-radius:22px;
+
+border:1px solid #e5e7eb;
+
+box-shadow:0 10px 25px rgba(15,23,42,.05);
+
+transition:.35s;
+
+}
+
+.value-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 25px 60px rgba(15,23,42,.12);
+
+}
+
+.value-card h1{
+
+font-size:3.5rem;
+
+color:#0b8f6a;
+
+margin-bottom:15px;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+.value-card h3{
+
+font-size:1.4rem;
+
+margin-bottom:15px;
+
+color:#0f172a;
+
+}
+
+.value-card p{
+
+color:#64748b;
+
+line-height:1.8;
+
+}
+
+
+
+/*============================
+SECTION DIVIDER
+============================*/
+
+.partners,
+.why,
+.values{
+
+position:relative;
+
+}
+
+.partners::after,
+.why::after,
+.values::after{
+
+content:"";
+
+position:absolute;
+
+left:50%;
+
+bottom:0;
+
+transform:translateX(-50%);
+
+width:120px;
+
+height:4px;
+
+border-radius:50px;
+
+background:#0b8f6a22;
+
+}
+
+
+
+/*============================
+PARTNER IMAGE
+============================*/
+
+.partners .employer-image img{
+
+height:520px;
+object-fit:cover;
+
+}
+
+
+
+/*============================
+CARD HOVER SMOOTHNESS
+============================*/
+
+.value-card,
+.why-card{
+
+will-change:transform;
+
+}/* ===================================================
+   PART 5
+   CONTACT + FOOTER + FLOATING MENU
+===================================================*/
+
+
+/*============================
+CONTACT
+============================*/
+
+.contact{
+
+background:#f8fafc;
+
+border-top:1px solid #edf2f7;
 
 }
 
@@ -1237,7 +1052,7 @@ grid-template-columns:repeat(4,1fr);
 
 gap:30px;
 
-margin-top:40px;
+margin-top:50px;
 
 }
 
@@ -1245,62 +1060,139 @@ margin-top:40px;
 
 background:#ffffff;
 
-padding:40px 30px;
+padding:35px;
 
-border-radius:24px;
+border-radius:22px;
 
-border:1px solid #E5E7EB;
+border:1px solid #e5e7eb;
 
-box-shadow:0 15px 45px rgba(15,23,42,.06);
-
-text-align:center;
+box-shadow:0 10px 25px rgba(15,23,42,.05);
 
 transition:.35s;
+
+text-align:center;
 
 }
 
 .contact-card:hover{
 
-transform:translateY(-10px);
+transform:translateY(-8px);
 
-box-shadow:0 30px 70px rgba(15,23,42,.15);
-
-border-color:#0B8F6A;
+box-shadow:0 20px 45px rgba(15,23,42,.12);
 
 }
 
 .contact-card h3{
 
-font-family:'Poppins',sans-serif;
-
-font-size:24px;
+font-size:1.35rem;
 
 margin-bottom:18px;
 
-color:#0F172A;
+color:#0f172a;
 
 }
 
 .contact-card p{
 
-font-size:17px;
+color:#64748b;
 
 line-height:1.8;
-
-color:#64748B;
 
 }
 
 
-/* ======================================================
-   FOOTER
-====================================================== */
+
+/*============================
+SOCIAL SECTION
+============================*/
+
+.social-section{
+
+margin-top:80px;
+
+padding:50px;
+
+background:#ffffff;
+
+border-radius:24px;
+
+text-align:center;
+
+box-shadow:0 15px 35px rgba(15,23,42,.06);
+
+border:1px solid #e5e7eb;
+
+}
+
+.social-section h3{
+
+font-size:2rem;
+
+margin-bottom:15px;
+
+color:#0f172a;
+
+}
+
+.social-section p{
+
+max-width:700px;
+
+margin:auto;
+
+color:#64748b;
+
+margin-bottom:35px;
+
+}
+
+.social-icons{
+
+display:flex;
+
+justify-content:center;
+
+gap:20px;
+
+flex-wrap:wrap;
+
+}
+
+.social-icons a{
+
+padding:14px 24px;
+
+background:#0f172a;
+
+color:#ffffff;
+
+border-radius:50px;
+
+font-weight:600;
+
+transition:.35s;
+
+}
+
+.social-icons a:hover{
+
+background:#0b8f6a;
+
+transform:translateY(-5px);
+
+}
+
+
+
+/*============================
+FOOTER
+============================*/
 
 footer{
 
-background:#0F172A;
+background:#0f172a;
 
-color:#CBD5E1;
+color:#ffffff;
 
 padding:90px 0 30px;
 
@@ -1314,58 +1206,49 @@ grid-template-columns:2fr 1fr 1fr;
 
 gap:60px;
 
-margin-bottom:50px;
+margin-bottom:40px;
 
 }
 
 .footer-logo{
 
-width:170px;
+width:75px;
 
 margin-bottom:20px;
+
+}
+
+.footer-brand p{
+
+color:#cbd5e1;
+
+line-height:1.8;
+
+max-width:320px;
 
 }
 
 footer h4{
 
-font-family:'Poppins',sans-serif;
-
-font-size:22px;
-
-color:#ffffff;
+font-size:1.2rem;
 
 margin-bottom:20px;
 
 }
 
-footer p{
-
-line-height:1.9;
-
-color:#CBD5E1;
-
-}
-
-
-/* ======================================================
-   FOOTER LINKS
-====================================================== */
-
 footer ul{
 
-padding:0;
+display:flex;
 
-}
+flex-direction:column;
 
-footer ul li{
-
-margin-bottom:14px;
+gap:14px;
 
 }
 
 footer ul li a{
 
-color:#CBD5E1;
+color:#cbd5e1;
 
 transition:.3s;
 
@@ -1373,53 +1256,11 @@ transition:.3s;
 
 footer ul li a:hover{
 
-color:#38BDF8;
+color:#34d399;
 
-padding-left:6px;
-
-}
-
-
-/* ======================================================
-   SOCIAL LINKS
-====================================================== */
-
-.social-links{
-
-display:flex;
-
-flex-direction:column;
-
-gap:16px;
+padding-left:8px;
 
 }
-
-.social-links a{
-
-display:inline-flex;
-
-align-items:center;
-
-font-weight:600;
-
-color:#CBD5E1;
-
-transition:.35s;
-
-}
-
-.social-links a:hover{
-
-color:#38BDF8;
-
-transform:translateX(8px);
-
-}
-
-
-/* ======================================================
-   COPYRIGHT
-====================================================== */
 
 footer hr{
 
@@ -1427,9 +1268,9 @@ border:none;
 
 height:1px;
 
-background:rgba(255,255,255,.08);
+background:#334155;
 
-margin:35px 0;
+margin:30px 0;
 
 }
 
@@ -1437,190 +1278,266 @@ margin:35px 0;
 
 text-align:center;
 
-font-size:15px;
+color:#94a3b8;
 
-color:#94A3B8;
-
-}
-
-
-/* ======================================================
-   GLOBAL HOVER EFFECTS
-====================================================== */
-
-.service-card,
-.info-card,
-.industry-card,
-.why-card,
-.value-card,
-.contact-card,
-.employer-image{
-
-transition:all .35s ease;
+font-size:.95rem;
 
 }
 
 
-/* ======================================================
-   SELECTION COLOR
-====================================================== */
 
-::selection{
+/*============================
+FLOATING MENU
+============================*/
 
-background:#0B8F6A;
+.floating-action{
+
+position:fixed;
+
+bottom:25px;
+
+right:25px;
+
+z-index:999;
+
+}
+
+#floatingButton{
+
+width:62px;
+
+height:62px;
+
+border:none;
+
+border-radius:50%;
+
+background:#0b8f6a;
 
 color:#ffffff;
 
-}
+font-size:28px;
 
+cursor:pointer;
 
-/* ======================================================
-   SCROLLBAR
-====================================================== */
+box-shadow:0 15px 35px rgba(0,0,0,.25);
 
-::-webkit-scrollbar{
-
-width:10px;
+transition:.35s;
 
 }
 
-::-webkit-scrollbar-track{
+#floatingButton:hover{
 
-background:#E5E7EB;
+transform:scale(1.08);
 
-}
-
-::-webkit-scrollbar-thumb{
-
-background:#123C69;
-
-border-radius:20px;
+background:#08775a;
 
 }
 
-::-webkit-scrollbar-thumb:hover{
+.floating-menu{
 
-background:#0B8F6A;
-
-}
-
-
-/* ======================================================
-   SMALL UTILITY CLASSES
-====================================================== */
-
-.text-center{
-
-text-align:center;
-
-}
-
-.mt-2{
-
-margin-top:20px;
-
-}
-
-.mt-3{
-
-margin-top:30px;
-
-}
-
-.mt-5{
-
-margin-top:50px;
-
-}
-
-.mb-2{
-
-margin-bottom:20px;
-
-}
-
-.mb-3{
-
-margin-bottom:30px;
-
-}
-
-.shadow{
-
-box-shadow:0 20px 60px rgba(15,23,42,.10);
-
-}
-
-.rounded{
-
-border-radius:24px;
-
-}/* ======================================================
-   PART 6 OF 6
-   RESPONSIVE + FINAL POLISH
-====================================================== */
-
-/* ---------- Large Screens ---------- */
-
-@media (min-width:1400px){
-
-.container{
-max-width:1320px;
-}
-
-.hero h1{
-font-size:78px;
-}
-
-.section-header h2{
-font-size:54px;
-}
-
-}
-
-
-/* ---------- Laptop ---------- */
-
-@media (max-width:1200px){
-
-.hero h1{
-font-size:58px;
-}
-
-.section-header h2{
-font-size:42px;
-}
-
-.services-grid,
-.why-grid,
-.contact-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-.industry-grid{
-grid-template-columns:repeat(3,1fr);
-}
-
-.values-grid{
-grid-template-columns:repeat(2,1fr);
-}
-
-}
-
-
-/* ---------- Tablet ---------- */
-
-@media (max-width:992px){
-
-nav{
+display:none;
 
 flex-direction:column;
 
-justify-content:center;
+gap:12px;
+
+margin-bottom:18px;
+
+}
+
+.floating-menu a{
+
+background:#ffffff;
+
+padding:14px 18px;
+
+border-radius:14px;
+
+box-shadow:0 10px 25px rgba(15,23,42,.12);
+
+font-weight:600;
+
+color:#0f172a;
+
+transition:.3s;
+
+white-space:nowrap;
+
+}
+
+.floating-menu a:hover{
+
+background:#0b8f6a;
+
+color:#ffffff;
+
+transform:translateX(-6px);
+
+}
+
+.floating-action.active .floating-menu{
+
+display:flex;
+
+}/* ===================================================
+PART 6
+RESPONSIVE + ANIMATIONS + FINAL POLISH
+===================================================*/
+
+/*============================
+ANIMATIONS
+============================*/
+
+.hero,
+.about,
+.services,
+.industries,
+.employers,
+.candidates,
+.partners,
+.why,
+.values,
+.contact{
+
+animation:fadeUp .8s ease;
+
+}
+
+@keyframes fadeUp{
+
+from{
+
+opacity:0;
+transform:translateY(35px);
+
+}
+
+to{
+
+opacity:1;
+transform:translateY(0);
+
+}
+
+}
+
+/*============================
+NAVBAR HOVER
+============================*/
+
+header{
+
+transition:.35s;
+
+}
+
+header.scrolled{
+
+background:#ffffff;
+
+box-shadow:0 15px 35px rgba(15,23,42,.08);
+
+}
+
+header.scrolled .menu a{
+
+color:#0f172a;
+
+}
+
+header.scrolled .menu a:hover{
+
+color:#0b8f6a;
+
+}
+
+/*============================
+GLOBAL HOVER
+============================*/
+
+img{
+
+transition:.4s;
+
+}
+
+.hero-image:hover img,
+.image-placeholder:hover img{
+
+transform:scale(1.04);
+
+}
+
+/*============================
+TABLET
+============================*/
+
+@media(max-width:992px){
+
+.hero-grid,
+.about-grid,
+.employer-grid{
+
+grid-template-columns:1fr;
+
+gap:45px;
+
+}
+
+.services-grid,
+.industry-grid,
+.values-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.why-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.contact-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.menu{
+
+gap:20px;
+
+}
+
+.hero h1{
+
+font-size:3rem;
+
+}
+
+.section-header h2{
+
+font-size:2.2rem;
+
+}
+
+}
+
+/*============================
+MOBILE
+============================*/
+
+@media(max-width:768px){
+
+nav{
 
 height:auto;
 
-padding:20px 0;
+padding:18px 0;
+
+flex-direction:column;
 
 gap:20px;
 
@@ -1632,48 +1549,50 @@ flex-wrap:wrap;
 
 justify-content:center;
 
-gap:18px;
+gap:15px;
 
 }
 
 .hero{
 
-text-align:center;
-
-padding:160px 0 100px;
+padding-top:170px;
 
 }
 
-.hero-content{
+.hero h1{
 
-margin:auto;
+font-size:2.3rem;
+
+}
+
+.section-header h2{
+
+font-size:2rem;
+
+}
+
+.services-grid,
+.industry-grid,
+.values-grid,
+.contact-grid{
+
+grid-template-columns:1fr;
 
 }
 
 .hero-buttons{
 
-justify-content:center;
+flex-direction:column;
+
+align-items:flex-start;
 
 }
 
-.about-grid,
-.employer-grid{
+.social-icons{
 
-grid-template-columns:1fr;
+flex-direction:column;
 
-gap:50px;
-
-}
-
-.image-placeholder{
-
-min-height:420px;
-
-}
-
-.employer-image img{
-
-height:420px;
+align-items:center;
 
 }
 
@@ -1685,62 +1604,51 @@ text-align:center;
 
 }
 
+.footer-brand{
+
+display:flex;
+
+flex-direction:column;
+
+align-items:center;
+
+}
+
 .footer-logo{
 
 margin:auto auto 20px;
 
 }
 
-.social-links{
-
-align-items:center;
-
-}
-
-}
-
-
-/* ---------- Mobile ---------- */
-
-@media (max-width:768px){
-
-.section{
+section{
 
 padding:80px 0;
 
 }
 
-.section-header{
-
-margin-bottom:45px;
-
 }
 
-.section-header h2{
+/*============================
+SMALL MOBILE
+============================*/
 
-font-size:34px;
+@media(max-width:480px){
+
+.container{
+
+width:94%;
 
 }
 
 .hero h1{
 
-font-size:42px;
+font-size:2rem;
 
 }
 
-.hero p{
+.section-header h2{
 
-font-size:17px;
-
-}
-
-.services-grid,
-.why-grid,
-.values-grid,
-.industry-grid,
-.contact-grid{
-
-grid-template-columns:1fr;
+font-size:1.7rem;
 
 }
 
@@ -1752,229 +1660,65 @@ width:100%;
 
 .hero-buttons{
 
-flex-direction:column;
-
-}
-
-.logo h2{
-
-font-size:24px;
-
-}
-
-.logo img{
-
-width:48px;
-
-}
-
-.menu{
-
-gap:12px;
-
-}
-
-.menu a{
-
-font-size:15px;
+width:100%;
 
 }
 
 .info-card,
 .service-card,
-.value-card,
-.why-card,
-.contact-card{
-
-padding:30px;
-
-}
-
-.employer-content h2{
-
-font-size:34px;
-
-}
-
-.employer-image img{
-
-height:320px;
-
-}
-
-}
-
-
-/* ---------- Small Phones ---------- */
-
-@media (max-width:480px){
-
-.container{
-
-width:92%;
-
-}
-
-.hero{
-
-padding-top:140px;
-
-}
-
-.hero h1{
-
-font-size:34px;
-
-}
-
-.hero p{
-
-font-size:16px;
-
-}
-
-.section-tag{
-
-font-size:11px;
-
-padding:8px 14px;
-
-}
-
-.section-header h2{
-
-font-size:28px;
-
-}
-
-.service-card h3,
-.info-card h3,
-.why-card h3,
-.contact-card h3{
-
-font-size:22px;
-
-}
-
-.value-card h1{
-
-font-size:48px;
-
-}
-
-.value-card h3{
-
-font-size:22px;
-
-}
-
-footer{
-
-padding-top:70px;
-
-}
-
-}
-
-
-/* ======================================================
-   SMOOTH ANIMATIONS
-====================================================== */
-
-img{
-
-transition:.45s ease;
-
-}
-
-button{
-
-transition:.35s ease;
-
-}
-
-.btn,
-.service-card,
-.info-card,
 .industry-card,
-.why-card,
-.value-card,
 .contact-card,
-.employer-image{
+.value-card,
+.why-card{
 
-will-change:transform;
-
-}
-
-
-/* ======================================================
-   FOCUS STATES
-====================================================== */
-
-a:focus,
-button:focus,
-input:focus,
-textarea:focus{
-
-outline:3px solid rgba(56,189,248,.35);
-
-outline-offset:4px;
+padding:28px;
 
 }
 
+}
 
-/* ======================================================
-   PREMIUM GLASS SUPPORT
-====================================================== */
+/*============================
+SCROLLBAR
+============================*/
 
-.glass{
+::-webkit-scrollbar{
 
-background:rgba(255,255,255,.18);
-
-backdrop-filter:blur(18px);
-
-border:1px solid rgba(255,255,255,.25);
+width:10px;
 
 }
 
+::-webkit-scrollbar-track{
 
-/* ======================================================
-   FINAL POLISH
-====================================================== */
-
-body{
-
-text-rendering:optimizeLegibility;
-
--webkit-font-smoothing:antialiased;
-
--moz-osx-font-smoothing:grayscale;
+background:#f1f5f9;
 
 }
 
-.section{
+::-webkit-scrollbar-thumb{
 
-scroll-margin-top:100px;
+background:#0b8f6a;
 
-}
-
-img{
-
-user-select:none;
+border-radius:20px;
 
 }
 
-.hero,
-.about,
-.services,
-.industries,
-.why,
-.values,
-.employers,
-.candidates,
-.partners,
-.contact{
+::-webkit-scrollbar-thumb:hover{
 
-overflow:hidden;
+background:#08775a;
 
 }
+
+/*============================
+TEXT SELECTION
+============================*/
+
+::selection{
+
+background:#0b8f6a;
+
+color:#ffffff;
+
+}
+
+/*============================
+END OF STYLE.CSS
+===================================================*/
