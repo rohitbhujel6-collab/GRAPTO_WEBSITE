@@ -1,6 +1,6 @@
-
 /* ==========================================
-   GRAPTO GLOBAL STYLES
+   GRAPTO V2.0
+   GLOBAL STYLES
 ========================================== */
 
 *{
@@ -14,144 +14,50 @@ html{
 }
 
 body{
-
     font-family:var(--font-family);
-
     background:var(--gray-50);
-
     color:var(--gray-900);
-
-    line-height:1.7;
-
+    line-height:1.6;
     overflow-x:hidden;
-
 }
 
 img{
-
-    max-width:100%;
-
     display:block;
-
+    max-width:100%;
 }
 
 a{
-
     text-decoration:none;
-
     color:inherit;
-
 }
 
-ul{
-
-    list-style:none;
-
-}
-
-button{
-
-    font-family:inherit;
-
-    cursor:pointer;
-
-}
-
+button,
 input{
-
     font-family:inherit;
-
-    outline:none;
-
 }
-
-/* ==========================
-   CONTAINER
-========================== */
 
 .container{
-
-    width:min(92%,var(--container));
-
+    width:min(92%,1200px);
     margin:auto;
-
 }
 
-/* ==========================
-   SECTION
-========================== */
-
-.section{
-
-    padding:100px 0;
-
-}
-
-.light{
-
-    background:#fff;
-
-}
-
-/* ==========================
-   SECTION TITLE
-========================== */
-
-.section-title{
-
-    text-align:center;
-
-    margin-bottom:60px;
-
-}
-
-.section-title h2{
-
-    font-size:var(--fs-3xl);
-
-    font-weight:700;
-
-    color:var(--secondary);
-
-    margin-bottom:15px;
-
-}
-
-.section-title p{
-
-    color:var(--gray-600);
-
-    max-width:700px;
-
-    margin:auto;
-
-}
-
-/* ==========================
+/* ==========================================
    HEADER
-========================== */
+========================================== */
 
 .header{
-
     position:sticky;
-
     top:0;
-
-    z-index:1000;
-
-    background:#fff;
-
-    box-shadow:var(--shadow-sm);
-
+    left:0;
+    width:100%;
+    background:#ffffff;
+    z-index:999;
+    box-shadow:0 3px 18px rgba(0,0,0,.06);
 }
-
-/* ==========================
-   NAVIGATION
-========================== */
 
 .nav{
 
-    height:80px;
+    min-height:90px;
 
     display:flex;
 
@@ -159,9 +65,51 @@ input{
 
     justify-content:space-between;
 
+    gap:30px;
+
 }
 
+/* ==========================================
+   LOGO
+========================================== */
+
 .logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:14px;
+
+    flex-shrink:0;
+
+    min-width:250px;
+
+}
+
+.logo-img{
+
+    width:56px;
+
+    height:56px;
+
+    border-radius:12px;
+
+    background:#eef4ff;
+
+    object-fit:cover;
+
+}
+
+.logo-content{
+
+    display:flex;
+
+    flex-direction:column;
+
+}
+
+.logo-content h2{
 
     font-size:28px;
 
@@ -169,23 +117,47 @@ input{
 
     color:var(--primary);
 
+    line-height:1;
+
 }
+
+.logo-content p{
+
+    margin-top:6px;
+
+    font-size:13px;
+
+    color:var(--gray-600);
+
+    white-space:nowrap;
+
+}
+
+/* ==========================================
+   NAVIGATION
+========================================== */
 
 .navigation{
 
+    flex:1;
+
     display:flex;
 
-    gap:30px;
+    justify-content:center;
+
+    gap:28px;
 
 }
 
 .navigation a{
 
+    font-size:15px;
+
+    font-weight:600;
+
     color:var(--gray-700);
 
-    transition:var(--transition);
-
-    font-weight:500;
+    transition:.3s;
 
 }
 
@@ -199,13 +171,15 @@ input{
 
     display:flex;
 
-    gap:15px;
+    gap:12px;
+
+    flex-shrink:0;
 
 }
 
-/* ==========================
+/* ==========================================
    BUTTONS
-========================== */
+========================================== */
 
 .btn{
 
@@ -217,11 +191,15 @@ input{
 
     padding:14px 28px;
 
+    border:none;
+
     border-radius:999px;
 
     font-weight:600;
 
-    transition:var(--transition);
+    cursor:pointer;
+
+    transition:.3s;
 
 }
 
@@ -235,15 +213,17 @@ input{
 
 .btn-primary:hover{
 
-    background:var(--primary-dark);
-
     transform:translateY(-2px);
+
+    background:var(--primary-dark);
 
 }
 
 .btn-outline{
 
     border:2px solid var(--primary);
+
+    background:#fff;
 
     color:var(--primary);
 
@@ -257,19 +237,31 @@ input{
 
 }
 
-/* ==========================
+/* ==========================================
    HERO
-========================== */
+========================================== */
 
 .hero{
 
-    padding:120px 0;
+    position:relative;
 
-    background:linear-gradient(135deg,#eff6ff,#ffffff);
+    background:linear-gradient(135deg,#eef5ff,#ffffff);
+
+    padding:80px 0 100px;
+
+}
+
+.hero-banner{
+
+    display:none;
 
 }
 
 .hero-content{
+
+    max-width:900px;
+
+    margin:auto;
 
     text-align:center;
 
@@ -277,15 +269,15 @@ input{
 
 .hero h1{
 
-    font-size:60px;
+    font-size:clamp(46px,6vw,72px);
+
+    line-height:1.15;
+
+    margin-bottom:25px;
 
     font-weight:800;
 
-    line-height:1.2;
-
     color:var(--secondary);
-
-    margin-bottom:20px;
 
 }
 
@@ -297,19 +289,19 @@ input{
 
 .hero p{
 
-    max-width:700px;
+    max-width:760px;
 
-    margin:0 auto 50px;
-
-    color:var(--gray-600);
+    margin:0 auto 45px;
 
     font-size:20px;
 
+    color:var(--gray-600);
+
 }
 
-/* ==========================
-   SEARCH BOX
-========================== */
+/* ==========================================
+   SEARCH
+========================================== */
 
 .search-box{
 
@@ -317,13 +309,13 @@ input{
 
     grid-template-columns:1fr 1fr auto;
 
-    gap:20px;
-
-    background:#fff;
+    gap:18px;
 
     padding:20px;
 
-    border-radius:20px;
+    background:#fff;
+
+    border-radius:18px;
 
     box-shadow:var(--shadow-lg);
 
@@ -331,11 +323,19 @@ input{
 
 .search-box input{
 
+    padding:16px;
+
     border:1px solid var(--gray-200);
 
     border-radius:12px;
 
-    padding:16px;
+    font-size:15px;
+
+}
+
+.search-box input:focus{
+
+    border-color:var(--primary);
 
 }
 
