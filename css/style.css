@@ -1,975 +1,1980 @@
-/* =====================================================
-   GRAPTO V3
-   GLOBAL STYLES
-===================================================== */
+/* ======================================================
+   GRAPTO WEBSITE
+   Premium Corporate Theme
+   Part 1 of 6
+====================================================== */
 
-/* ==========================
+/* ===============================
+   GOOGLE FONTS
+================================= */
+
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@500;600;700;800&display=swap');
+
+
+/* ===============================
    RESET
-========================== */
+================================= */
 
 *{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
+margin:0;
+padding:0;
+box-sizing:border-box;
 }
 
 html{
-    scroll-behavior:smooth;
+scroll-behavior:smooth;
 }
 
 body{
-    font-family:var(--font-family);
-    background:var(--gray-50);
-    color:var(--gray-900);
-    line-height:1.7;
-    overflow-x:hidden;
-    font-size:16px;
+
+font-family:'Inter',sans-serif;
+
+background:#F8FAFC;
+
+color:#1E293B;
+
+overflow-x:hidden;
+
+line-height:1.7;
+
+font-size:16px;
+
 }
 
-/* ==========================
-   ELEMENTS
-========================== */
+
+/* ===============================
+   IMAGES
+================================= */
 
 img{
-    display:block;
-    width:100%;
-    max-width:100%;
+
+display:block;
+
+width:100%;
+
+height:auto;
+
 }
+
+
+/* ===============================
+   LINKS
+================================= */
 
 a{
-    text-decoration:none;
-    color:inherit;
+
+text-decoration:none;
+
+color:inherit;
+
+transition:.35s;
+
 }
+
+
+/* ===============================
+   LIST
+================================= */
 
 ul{
-    list-style:none;
+
+list-style:none;
+
 }
 
-button,
-input,
-textarea{
-    font-family:inherit;
-    outline:none;
-}
 
-section{
-    position:relative;
-}
-
-/* ==========================
+/* ===============================
    CONTAINER
-========================== */
+================================= */
 
 .container{
 
-    width:min(92%,1200px);
+width:min(92%,1220px);
 
-    margin:auto;
+margin:auto;
 
 }
 
-/* ==========================
-   COMMON SECTION
-========================== */
+
+/* ===============================
+   SECTIONS
+================================= */
 
 .section{
 
-    padding:100px 0;
+padding:110px 0;
+
+position:relative;
 
 }
 
-.light{
 
-    background:#ffffff;
+/* ===============================
+   SECTION HEADER
+================================= */
 
-}
+.section-header{
 
-/* ==========================
-   SECTION TITLE
-========================== */
+text-align:center;
 
-.section-title{
-
-    text-align:center;
-
-    margin-bottom:70px;
+margin-bottom:70px;
 
 }
 
-.section-title span{
+.section-tag{
 
-    display:inline-block;
+display:inline-block;
 
-    color:var(--primary);
+padding:10px 18px;
 
-    font-size:14px;
+border-radius:999px;
 
-    font-weight:700;
+background:#DFF6EF;
 
-    letter-spacing:2px;
+color:#0B8F6A;
 
-    text-transform:uppercase;
+font-size:13px;
 
-    margin-bottom:15px;
+font-weight:700;
 
-}
+letter-spacing:2px;
 
-.section-title h2{
-
-    font-size:46px;
-
-    line-height:1.2;
-
-    color:var(--secondary);
-
-    margin-bottom:20px;
-
-    font-weight:800;
+margin-bottom:18px;
 
 }
 
-.section-title p{
+.section-header h2{
 
-    max-width:760px;
+font-family:'Poppins',sans-serif;
 
-    margin:auto;
+font-size:48px;
 
-    color:var(--gray-600);
+line-height:1.2;
 
-    font-size:18px;
+margin-bottom:18px;
+
+color:#0F172A;
 
 }
 
-/* ==========================
+.section-header p{
+
+max-width:760px;
+
+margin:auto;
+
+font-size:18px;
+
+color:#64748B;
+
+}
+
+
+/* ===============================
    BUTTONS
-========================== */
+================================= */
 
 .btn{
 
-    display:inline-flex;
+display:inline-flex;
 
-    align-items:center;
+align-items:center;
 
-    justify-content:center;
+justify-content:center;
 
-    padding:16px 34px;
+padding:16px 34px;
 
-    border-radius:999px;
+border-radius:999px;
 
-    font-weight:600;
+font-weight:700;
 
-    cursor:pointer;
+transition:.35s;
 
-    transition:.35s ease;
-
-    border:none;
-
-    font-size:15px;
+cursor:pointer;
 
 }
 
 .btn-primary{
 
-    background:var(--primary);
+background:#0F172A;
 
-    color:#ffffff;
+color:#ffffff;
+
+box-shadow:0 18px 40px rgba(15,23,42,.18);
 
 }
 
 .btn-primary:hover{
 
-    background:var(--primary-dark);
+background:#123C69;
 
-    transform:translateY(-3px);
-
-    box-shadow:0 18px 40px rgba(37,99,235,.25);
+transform:translateY(-4px);
 
 }
 
-.btn-outline{
+.btn-secondary{
 
-    border:2px solid var(--primary);
+background:#0B8F6A;
 
-    background:#ffffff;
-
-    color:var(--primary);
+color:#ffffff;
 
 }
 
-.btn-outline:hover{
+.btn-secondary:hover{
 
-    background:var(--primary);
+background:#097556;
 
-    color:#ffffff;
-
-    transform:translateY(-3px);
+transform:translateY(-4px);
 
 }
 
-/* ==========================
+
+/* ===============================
    HEADER
-========================== */
+================================= */
 
-.header{
+header{
 
-    position:sticky;
+position:fixed;
 
-    top:0;
+top:0;
 
-    width:100%;
+left:0;
 
-    background:#ffffff;
+width:100%;
 
-    z-index:999;
+z-index:1000;
 
-    box-shadow:0 5px 25px rgba(0,0,0,.05);
+background:rgba(15,23,42,.92);
 
-}
+backdrop-filter:blur(16px);
 
-/* ==========================
-   NAVBAR
-========================== */
-
-.nav{
-
-    min-height:92px;
-
-    display:flex;
-
-    align-items:center;
-
-    justify-content:space-between;
-
-    gap:35px;
+border-bottom:1px solid rgba(255,255,255,.08);
 
 }
 
-/* ==========================
-   LOGO
-========================== */
+
+/* ===============================
+   NAVIGATION
+================================= */
+
+nav{
+
+height:90px;
+
+display:flex;
+
+align-items:center;
+
+justify-content:space-between;
+
+}
 
 .logo{
 
-    display:flex;
+display:flex;
 
-    align-items:center;
+align-items:center;
 
-    gap:15px;
-
-    flex-shrink:0;
+gap:14px;
 
 }
 
-.logo-img{
+.logo img{
 
-    width:58px;
-
-    height:58px;
-
-    object-fit:contain;
+width:58px;
 
 }
 
-.logo-content h2{
+.logo h2{
 
-    font-size:30px;
+font-family:'Poppins',sans-serif;
 
-    color:var(--primary);
+color:#ffffff;
 
-    font-weight:800;
-
-    line-height:1;
+font-size:30px;
 
 }
 
-.logo-content p{
+.menu{
 
-    margin-top:5px;
+display:flex;
 
-    color:var(--gray-500);
-
-    font-size:13px;
-
-    white-space:nowrap;
+gap:34px;
 
 }
 
-/* ==========================
-   NAVIGATION
-========================== */
+.menu a{
 
-.navigation{
+color:#ffffff;
 
-    display:flex;
+font-weight:600;
 
-    align-items:center;
-
-    justify-content:center;
-
-    flex:1;
-
-    gap:28px;
+position:relative;
 
 }
 
-.navigation a{
+.menu a:hover{
 
-    position:relative;
-
-    font-size:15px;
-
-    font-weight:600;
-
-    color:var(--gray-700);
-
-    transition:.3s;
+color:#38BDF8;
 
 }
 
-.navigation a:hover{
+.menu a::after{
 
-    color:var(--primary);
+content:"";
 
-}
+position:absolute;
 
-.navigation a::after{
+left:0;
 
-    content:"";
+bottom:-8px;
 
-    position:absolute;
+width:0;
 
-    left:0;
+height:2px;
 
-    bottom:-8px;
+background:#38BDF8;
 
-    width:0;
-
-    height:2px;
-
-    background:var(--primary);
-
-    transition:.3s;
+transition:.3s;
 
 }
 
-.navigation a:hover::after{
+.menu a:hover::after{
 
-    width:100%;
-
-}
-
-/* ==========================
-   NAV BUTTONS
-========================== */
-
-.nav-buttons{
-
-    display:flex;
-
-    align-items:center;
-
-    gap:14px;
-
-    flex-shrink:0;
+width:100%;
 
 }
 
-.nav-buttons .btn{
 
-    padding:13px 24px;
+/* ===============================
+   HERO
+================================= */
 
-}<!-- ========================================= -->
-<!-- ABOUT GRAPTO -->
-<!-- ========================================= -->
+.hero{
 
-<section id="about" class="about section">
+min-height:100vh;
 
-    <div class="container">
+display:flex;
 
-        <div class="section-header">
-            <span class="section-tag">ABOUT US</span>
-            <h2>Building Stronger Businesses Through Better Talent.</h2>
-            <p>
-                GRAPTO is a recruitment and workforce solutions company
-                operating remotely from Siliguri, West Bengal. We help
-                businesses hire the right talent while helping professionals
-                build meaningful careers.
-            </p>
-        </div>
+align-items:center;
 
-        <div class="about-grid">
+background:
+linear-gradient(rgba(15,23,42,.72),rgba(15,23,42,.78)),
+url("../images/hero.jpg");
 
-            <div class="about-content">
+background-size:cover;
 
-                <div class="info-card">
-                    <h3>Our Mission</h3>
-                    <p>
-                        Deliver reliable recruitment, staffing and workforce
-                        solutions through innovation, trust and long-term
-                        partnerships.
-                    </p>
-                </div>
+background-position:center;
 
-                <div class="info-card">
-                    <h3>Our Vision</h3>
-                    <p>
-                        To become India's most trusted workforce solutions
-                        partner for businesses of every size.
-                    </p>
-                </div>
+color:#ffffff;
 
-            </div>
+padding-top:120px;
 
-            <div class="image-placeholder">
+}
 
-                <img src="assets/images/about-placeholder.jpg"
-                     alt="About GRAPTO">
+.hero-content{
 
-                <div class="admin-note">
-                    Future Admin Upload
-                </div>
+max-width:720px;
 
-            </div>
+}
 
-        </div>
+.hero h1{
 
-    </div>
+font-family:'Poppins',sans-serif;
 
-</section>
+font-size:68px;
 
+line-height:1.1;
 
-<!-- ========================================= -->
-<!-- SERVICES -->
-<!-- ========================================= -->
+margin-bottom:26px;
 
-<section id="services" class="services section">
+}
 
-<div class="container">
+.hero p{
 
-<div class="section-header">
+font-size:20px;
 
-<span class="section-tag">
-OUR SERVICES
-</span>
+color:#E2E8F0;
 
-<h2>
-Helping Businesses Build Better Teams
-</h2>
+margin-bottom:38px;
 
-</div>
+max-width:650px;
 
-<div class="services-grid">
+}
 
-<div class="service-card">
+.hero-buttons{
 
-<h3>Recruitment</h3>
+display:flex;
 
-<p>
-Permanent hiring solutions across multiple industries.
-</p>
+gap:18px;
 
-</div>
+flex-wrap:wrap;
 
-<div class="service-card">
+}/* ======================================================
+   ABOUT SECTION
+====================================================== */
 
-<h3>Staffing Solutions</h3>
+.about{
 
-<p>
-Temporary, contractual and project-based workforce support.
-</p>
+background:#ffffff;
 
-</div>
+}
 
-<div class="service-card">
+.about-grid{
 
-<h3>HR Support</h3>
+display:grid;
 
-<p>
-Hiring assistance, onboarding and workforce coordination.
-</p>
+grid-template-columns:1.2fr 1fr;
 
-</div>
+gap:70px;
 
-<div class="service-card">
+align-items:center;
 
-<h3>Business Operations</h3>
+}
 
-<p>
-Operational workforce planning and execution support.
-</p>
+.about-content{
 
-</div>
+display:grid;
 
-<div class="service-card">
+gap:30px;
 
-<h3>Growth Partnerships</h3>
+}
 
-<p>
-Helping organizations scale through strategic hiring.
-</p>
+.info-card{
 
-</div>
+background:#ffffff;
 
-<div class="service-card">
+padding:35px;
 
-<h3>Workforce Consulting</h3>
+border-radius:22px;
 
-<p>
-Customized hiring strategies designed for your business.
-</p>
+border:1px solid #E5E7EB;
 
-</div>
+box-shadow:0 15px 40px rgba(15,23,42,.06);
 
-</div>
+transition:.35s;
 
-</div>
+}
 
-</section>
+.info-card:hover{
 
+transform:translateY(-8px);
 
-<!-- ========================================= -->
-<!-- INDUSTRIES -->
-<!-- ========================================= -->
+box-shadow:0 22px 60px rgba(15,23,42,.12);
 
-<section id="industries" class="industries section">
+border-color:#0B8F6A;
 
-<div class="container">
+}
 
-<div class="section-header">
+.info-card h3{
 
-<span class="section-tag">
+font-family:'Poppins',sans-serif;
 
-INDUSTRIES
+font-size:28px;
 
-</span>
+margin-bottom:16px;
 
-<h2>
+color:#0F172A;
 
-Industries We Serve
+}
 
-</h2>
+.info-card p{
 
-</div>
+font-size:17px;
 
-<div class="industry-grid">
+color:#64748B;
 
-<div class="industry-card">Retail</div>
+line-height:1.8;
 
-<div class="industry-card">Logistics</div>
+}
 
-<div class="industry-card">Manufacturing</div>
+.image-placeholder{
 
-<div class="industry-card">Hospitality</div>
+position:relative;
 
-<div class="industry-card">Healthcare</div>
+overflow:hidden;
 
-<div class="industry-card">Education</div>
+border-radius:24px;
 
-<div class="industry-card">IT Services</div>
+background:#EEF2F7;
 
-<div class="industry-card">E-Commerce</div>
+min-height:520px;
 
-</div>
+display:flex;
 
-<p class="future-note">
+align-items:center;
 
-Industry images will later be uploaded through the Admin Panel.
+justify-content:center;
 
-</p>
+box-shadow:0 20px 60px rgba(15,23,42,.12);
 
-</div>
+}
 
-</section><!-- ========================================= -->
-<!-- WHY CHOOSE GRAPTO -->
-<!-- ========================================= -->
+.image-placeholder img{
 
-<section id="why" class="why section">
+width:100%;
 
-<div class="container">
+height:100%;
 
-<div class="section-header">
+object-fit:cover;
 
-<span class="section-tag">
-WHY CHOOSE US
-</span>
+}
 
-<h2>
-Why Businesses Choose GRAPTO
-</h2>
+.admin-note{
 
-<p>
-We combine industry knowledge, strategic hiring, and long-term partnerships
-to help organizations build exceptional teams.
-</p>
+position:absolute;
 
-</div>
+bottom:20px;
 
-<div class="why-grid">
+left:20px;
 
-<div class="why-card">
-<h3>Fast Hiring</h3>
-<p>Quick turnaround with quality candidate sourcing.</p>
-</div>
+background:rgba(15,23,42,.82);
 
-<div class="why-card">
-<h3>Verified Talent</h3>
-<p>Professionals carefully shortlisted for your requirements.</p>
-</div>
+color:#ffffff;
 
-<div class="why-card">
-<h3>Dedicated Support</h3>
-<p>Personalized assistance throughout the hiring journey.</p>
-</div>
+padding:10px 18px;
 
-<div class="why-card">
-<h3>Long-Term Partnership</h3>
-<p>We focus on relationships, not just placements.</p>
-</div>
+border-radius:50px;
 
-</div>
+font-size:13px;
 
-</div>
+font-weight:600;
 
-</section>
+backdrop-filter:blur(10px);
 
-<!-- ========================================= -->
-<!-- CORE VALUES -->
-<!-- ========================================= -->
+}
 
-<section id="values" class="values section">
 
-<div class="container">
+/* ======================================================
+   SERVICES
+====================================================== */
 
-<div class="section-header">
+.services{
 
-<span class="section-tag">
-OUR VALUES
-</span>
+background:#F8FAFC;
 
-<h2>
-The Meaning Behind GRAPTO
-</h2>
+}
 
-</div>
+.services-grid{
 
-<div class="values-grid">
+display:grid;
 
-<div class="value-card">
-<h1>G</h1>
-<h3>Growth</h3>
-<p>Creating opportunities for businesses and professionals.</p>
-</div>
+grid-template-columns:repeat(3,1fr);
 
-<div class="value-card">
-<h1>R</h1>
-<h3>Respect</h3>
-<p>Building relationships based on trust and integrity.</p>
-</div>
+gap:32px;
 
-<div class="value-card">
-<h1>A</h1>
-<h3>Accountability</h3>
-<p>Owning every commitment with professionalism.</p>
-</div>
+}
 
-<div class="value-card">
-<h1>P</h1>
-<h3>Professionalism</h3>
-<p>Delivering quality services with consistency.</p>
-</div>
+.service-card{
 
-<div class="value-card">
-<h1>T</h1>
-<h3>Trust</h3>
-<p>Strengthening partnerships through transparency.</p>
-</div>
+background:#ffffff;
 
-<div class="value-card">
-<h1>O</h1>
-<h3>Ownership</h3>
-<p>Taking responsibility for every client's success.</p>
-</div>
+padding:40px;
 
-</div>
+border-radius:24px;
 
-</div>
+border:1px solid #E5E7EB;
 
-</section>
+box-shadow:0 15px 45px rgba(15,23,42,.06);
 
-<!-- ========================================= -->
-<!-- EMPLOYERS -->
-<!-- ========================================= -->
+transition:.35s;
 
-<section id="employers" class="employers section">
+position:relative;
 
-<div class="container employer-grid">
+overflow:hidden;
 
-<div class="employer-image">
+}
 
-<a href="#" id="clientFormLink">
+.service-card::before{
 
-<img src="assets/images/employer-placeholder.jpg"
-alt="Employers">
+content:"";
 
-</a>
+position:absolute;
 
-<p class="admin-note">
-Future Admin Upload
-</p>
+top:0;
 
-</div>
+left:0;
 
-<div class="employer-content">
+width:100%;
 
-<span class="section-tag">
-FOR EMPLOYERS
-</span>
+height:5px;
 
-<h2>
-Looking for the Right Talent?
-</h2>
+background:linear-gradient(90deg,#0B8F6A,#123C69);
 
-<p>
-From permanent recruitment to workforce solutions,
-GRAPTO helps businesses build stronger teams with confidence.
-</p>
+transform:scaleX(0);
 
-<a href="#" id="clientFormButton" class="btn btn-primary">
-Hire Talent
-</a>
+transform-origin:left;
 
-</div>
+transition:.35s;
 
-</div>
+}
 
-</section>
+.service-card:hover::before{
 
-<!-- ========================================= -->
-<!-- CANDIDATES -->
-<!-- ========================================= -->
+transform:scaleX(1);
 
-<section id="candidates" class="candidates section">
+}
 
-<div class="container employer-grid">
+.service-card:hover{
 
-<div class="employer-content">
+transform:translateY(-10px);
 
-<span class="section-tag">
-FOR CANDIDATES
-</span>
+box-shadow:0 30px 70px rgba(15,23,42,.15);
 
-<h2>
-Find Your Next Career Opportunity
-</h2>
+}
 
-<p>
-Join the GRAPTO Talent Network and discover opportunities
-that match your skills and ambitions.
-</p>
+.service-card h3{
 
-<a href="#" id="candidateFormButton" class="btn btn-primary">
-Join Talent Network
-</a>
+font-family:'Poppins',sans-serif;
 
-</div>
+font-size:26px;
 
-<div class="employer-image">
+margin-bottom:18px;
 
-<a href="#" id="candidateFormLink">
+color:#0F172A;
 
-<img src="assets/images/candidate-placeholder.jpg"
-alt="Candidates">
+}
 
-</a>
+.service-card p{
 
-<p class="admin-note">
-Future Admin Upload
-</p>
+color:#64748B;
 
-</div>
+font-size:17px;
 
-</div>
+line-height:1.8;
 
-</section>
+}
 
-<!-- ========================================= -->
-<!-- PARTNERS -->
-<!-- ========================================= -->
 
-<section id="partners" class="partners section">
+/* ======================================================
+   INDUSTRIES
+====================================================== */
 
-<div class="container employer-grid">
+.industries{
 
-<div class="employer-image">
+background:#ffffff;
 
-<a href="#" id="partnerFormLink">
+}
 
-<img src="assets/images/partner-placeholder.jpg"
-alt="Partners">
+.industry-grid{
 
-</a>
+display:grid;
 
-<p class="admin-note">
-Future Admin Upload
-</p>
+grid-template-columns:repeat(4,1fr);
 
-</div>
+gap:28px;
 
-<div class="employer-content">
+margin-top:30px;
 
-<span class="section-tag">
-PARTNERS
-</span>
+}
 
-<h2>
-Partner With GRAPTO
-</h2>
+.industry-card{
 
-<p>
-Collaborate with us to expand opportunities,
-deliver workforce excellence,
-and build long-term business success.
-</p>
+background:linear-gradient(135deg,#0F172A,#123C69);
 
-<a href="#" id="partnerFormButton" class="btn btn-primary">
-Become a Partner
-</a>
+color:#ffffff;
 
-</div>
+padding:40px 20px;
 
-</div>
+border-radius:22px;
 
-</section>
+text-align:center;
 
-<!-- ========================================= -->
-<!-- CONTACT -->
-<!-- ========================================= -->
+font-family:'Poppins',sans-serif;
 
-<section id="contact" class="contact section">
+font-size:22px;
 
-<div class="container">
+font-weight:600;
 
-<div class="section-header">
+transition:.35s;
 
-<span class="section-tag">
-CONTACT
-</span>
+cursor:pointer;
 
-<h2>
-Let's Connect
-</h2>
+box-shadow:0 15px 45px rgba(15,23,42,.15);
 
-</div>
+}
 
-<div class="contact-grid">
+.industry-card:hover{
 
-<div class="contact-card">
+transform:translateY(-10px) scale(1.03);
 
-<h3>Operating Location</h3>
+background:linear-gradient(135deg,#0B8F6A,#123C69);
 
-<p>
-📍 Operating Remotely
-<br>
-Siliguri, West Bengal, India
-</p>
+}
 
-</div>
+.future-note{
 
-<div class="contact-card">
+text-align:center;
 
-<h3>Email</h3>
+margin-top:40px;
 
-<p>info@grapto.in</p>
+font-size:16px;
 
-</div>
+color:#64748B;
 
-<div class="contact-card">
+font-style:italic;
 
-<h3>Phone</h3>
+}/* ======================================================
+   WHY CHOOSE GRAPTO
+====================================================== */
 
-<p>+91 XXXXX XXXXX</p>
+.why{
+background:#F8FAFC;
+}
 
-</div>
+.why-grid{
+display:grid;
+grid-template-columns:repeat(4,1fr);
+gap:30px;
+margin-top:20px;
+}
 
-<div class="contact-card">
+.why-card{
+background:#ffffff;
+padding:40px 30px;
+border-radius:24px;
+text-align:center;
+border:1px solid #E5E7EB;
+box-shadow:0 18px 50px rgba(15,23,42,.06);
+transition:.35s;
+position:relative;
+overflow:hidden;
+}
 
-<h3>Business Hours</h3>
+.why-card::before{
+content:"";
+position:absolute;
+top:0;
+left:0;
+width:100%;
+height:5px;
+background:linear-gradient(90deg,#123C69,#0B8F6A);
+transform:scaleX(0);
+transform-origin:left;
+transition:.35s;
+}
 
-<p>Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+.why-card:hover::before{
+transform:scaleX(1);
+}
 
-</div>
+.why-card:hover{
+transform:translateY(-12px);
+box-shadow:0 28px 65px rgba(15,23,42,.15);
+}
 
-</div>
+.why-card h3{
+font-family:'Poppins',sans-serif;
+font-size:24px;
+margin-bottom:18px;
+color:#0F172A;
+}
 
-</div>
+.why-card p{
+color:#64748B;
+font-size:16px;
+line-height:1.8;
+}
 
-</section>
 
-<!-- ========================================= -->
-<!-- FOOTER -->
-<!-- ========================================= -->
+/* ======================================================
+   CORE VALUES
+====================================================== */
 
-<footer>
+.values{
+background:#ffffff;
+}
 
-<div class="container">
+.values-grid{
+display:grid;
+grid-template-columns:repeat(3,1fr);
+gap:30px;
+margin-top:25px;
+}
 
-<div class="footer-grid">
+.value-card{
+background:#ffffff;
+padding:45px 35px;
+text-align:center;
+border-radius:24px;
+border:1px solid #E5E7EB;
+box-shadow:0 18px 50px rgba(15,23,42,.06);
+transition:.35s;
+}
 
-<div>
+.value-card:hover{
+transform:translateY(-10px);
+box-shadow:0 30px 70px rgba(15,23,42,.15);
+border-color:#0B8F6A;
+}
 
-<img src="assets/images/logo.png" alt="GRAPTO Logo" class="footer-logo">
+.value-card h1{
+font-family:'Poppins',sans-serif;
+font-size:64px;
+color:#0B8F6A;
+margin-bottom:15px;
+}
 
-<p>
-People. Partnerships. Progress.
-</p>
+.value-card h3{
+font-family:'Poppins',sans-serif;
+font-size:26px;
+margin-bottom:18px;
+color:#0F172A;
+}
 
-</div>
+.value-card p{
+color:#64748B;
+line-height:1.8;
+}
 
-<div>
 
-<h4>Quick Links</h4>
+/* ======================================================
+   SIMPLE FADE ANIMATIONS
+====================================================== */
 
-<ul>
-<li><a href="#about">About</a></li>
-<li><a href="#services">Services</a></li>
-<li><a href="#industries">Industries</a></li>
-<li><a href="#contact">Contact</a></li>
-</ul>
+.service-card,
+.info-card,
+.industry-card,
+.why-card,
+.value-card{
 
-</div>
+animation:fadeUp .8s ease both;
 
-<div>
+}
 
-<h4>Follow Us</h4>
+@keyframes fadeUp{
 
-<div class="social-links">
+0%{
+opacity:0;
+transform:translateY(40px);
+}
 
-<a href="#" id="linkedinLink">LinkedIn</a>
+100%{
+opacity:1;
+transform:translateY(0);
+}
 
-<a href="#" id="facebookLink">Facebook</a>
+}
 
-<a href="#" id="instagramLink">Instagram</a>
 
-<a href="#" id="youtubeLink">YouTube</a>
+/* ======================================================
+   PREMIUM HOVER EFFECTS
+====================================================== */
 
-</div>
+.info-card,
+.service-card,
+.industry-card,
+.why-card,
+.value-card{
 
-</div>
+transition:
+transform .35s ease,
+box-shadow .35s ease,
+border-color .35s ease;
 
-</div>
+}
 
-<hr>
+.section-header h2{
 
-<p class="copyright">
+background:linear-gradient(90deg,#0F172A,#123C69);
 
-© 2026 GRAPTO. All Rights Reserved.
+-webkit-background-clip:text;
 
-</p>
+-webkit-text-fill-color:transparent;
 
-</div>
+}
 
-</footer>
 
-</body>
+/* ======================================================
+   SPACING IMPROVEMENTS
+====================================================== */
 
-</html>
+.about,
+.services,
+.industries,
+.why,
+.values{
+
+position:relative;
+overflow:hidden;
+
+}
+
+.about::after,
+.services::after,
+.industries::after{
+
+content:"";
+
+position:absolute;
+
+right:-120px;
+
+top:-120px;
+
+width:260px;
+
+height:260px;
+
+background:rgba(11,143,106,.05);
+
+border-radius:50%;
+
+filter:blur(20px);
+
+pointer-events:none;
+
+}/* ======================================================
+   EMPLOYERS | CANDIDATES | PARTNERS
+====================================================== */
+
+.employers,
+.candidates,
+.partners{
+padding:120px 0;
+background:#F8FAFC;
+}
+
+.candidates{
+background:#ffffff;
+}
+
+.partner{
+background:#F8FAFC;
+}
+
+.employer-grid{
+
+display:grid;
+
+grid-template-columns:1fr 1fr;
+
+align-items:center;
+
+gap:70px;
+
+}
+
+.employer-content h2{
+
+font-family:'Poppins',sans-serif;
+
+font-size:48px;
+
+color:#0F172A;
+
+line-height:1.2;
+
+margin:20px 0;
+
+}
+
+.employer-content p{
+
+font-size:18px;
+
+color:#64748B;
+
+line-height:1.9;
+
+margin-bottom:35px;
+
+max-width:560px;
+
+}
+
+
+/* ===========================
+IMAGE AREA
+=========================== */
+
+.employer-image{
+
+position:relative;
+
+overflow:hidden;
+
+border-radius:28px;
+
+box-shadow:0 25px 60px rgba(15,23,42,.15);
+
+transition:.45s;
+
+background:#EEF2F7;
+
+}
+
+.employer-image img{
+
+width:100%;
+
+height:520px;
+
+object-fit:cover;
+
+transition:.6s;
+
+}
+
+.employer-image:hover img{
+
+transform:scale(1.08);
+
+}
+
+.employer-image:hover{
+
+transform:translateY(-12px);
+
+box-shadow:0 40px 80px rgba(15,23,42,.22);
+
+}
+
+
+/* ===========================
+ADMIN NOTE
+=========================== */
+
+.admin-note{
+
+position:absolute;
+
+bottom:20px;
+
+left:20px;
+
+padding:10px 18px;
+
+background:rgba(15,23,42,.88);
+
+color:#ffffff;
+
+border-radius:999px;
+
+font-size:13px;
+
+font-weight:600;
+
+backdrop-filter:blur(12px);
+
+}
+
+
+/* ===========================
+CTA BUTTONS
+=========================== */
+
+.employer-content .btn{
+
+padding:18px 42px;
+
+font-size:16px;
+
+font-weight:700;
+
+border-radius:999px;
+
+box-shadow:0 18px 45px rgba(15,23,42,.18);
+
+}
+
+.employer-content .btn:hover{
+
+transform:translateY(-5px);
+
+}
+
+
+/* ===========================
+IMAGE LINK
+=========================== */
+
+.employer-image a{
+
+display:block;
+
+height:100%;
+
+}
+
+
+/* ===========================
+SECTION BACKGROUND
+=========================== */
+
+.employers::before,
+.partners::before{
+
+content:"";
+
+position:absolute;
+
+right:-180px;
+
+top:-150px;
+
+width:420px;
+
+height:420px;
+
+background:rgba(11,143,106,.05);
+
+border-radius:50%;
+
+filter:blur(40px);
+
+pointer-events:none;
+
+}
+
+.candidates::before{
+
+content:"";
+
+position:absolute;
+
+left:-180px;
+
+bottom:-150px;
+
+width:420px;
+
+height:420px;
+
+background:rgba(18,60,105,.05);
+
+border-radius:50%;
+
+filter:blur(40px);
+
+pointer-events:none;
+
+}
+
+
+/* ===========================
+HOVER EFFECTS
+=========================== */
+
+.employer-content{
+
+animation:fadeUp .9s ease both;
+
+}
+
+.employer-image{
+
+animation:fadeUp .9s ease both;
+
+}
+
+
+/* ===========================
+SECTION TAG
+=========================== */
+
+.employer-content .section-tag{
+
+margin-bottom:10px;
+
+}
+
+
+/* ===========================
+SMALL TEXT
+=========================== */
+
+.employer-content small{
+
+display:block;
+
+margin-top:15px;
+
+font-size:14px;
+
+color:#94A3B8;
+
+}
+
+
+/* ===========================
+CTA CARD LOOK
+=========================== */
+
+.employer-content{
+
+padding:10px;
+
+}
+
+
+/* ===========================
+IMAGE BORDER
+=========================== */
+
+.employer-image{
+
+border:1px solid rgba(255,255,255,.35);
+
+}/* ======================================================
+   CONTACT SECTION
+====================================================== */
+
+.contact{
+
+background:#ffffff;
+
+position:relative;
+
+}
+
+.contact-grid{
+
+display:grid;
+
+grid-template-columns:repeat(4,1fr);
+
+gap:30px;
+
+margin-top:40px;
+
+}
+
+.contact-card{
+
+background:#ffffff;
+
+padding:40px 30px;
+
+border-radius:24px;
+
+border:1px solid #E5E7EB;
+
+box-shadow:0 15px 45px rgba(15,23,42,.06);
+
+text-align:center;
+
+transition:.35s;
+
+}
+
+.contact-card:hover{
+
+transform:translateY(-10px);
+
+box-shadow:0 30px 70px rgba(15,23,42,.15);
+
+border-color:#0B8F6A;
+
+}
+
+.contact-card h3{
+
+font-family:'Poppins',sans-serif;
+
+font-size:24px;
+
+margin-bottom:18px;
+
+color:#0F172A;
+
+}
+
+.contact-card p{
+
+font-size:17px;
+
+line-height:1.8;
+
+color:#64748B;
+
+}
+
+
+/* ======================================================
+   FOOTER
+====================================================== */
+
+footer{
+
+background:#0F172A;
+
+color:#CBD5E1;
+
+padding:90px 0 30px;
+
+}
+
+.footer-grid{
+
+display:grid;
+
+grid-template-columns:2fr 1fr 1fr;
+
+gap:60px;
+
+margin-bottom:50px;
+
+}
+
+.footer-logo{
+
+width:170px;
+
+margin-bottom:20px;
+
+}
+
+footer h4{
+
+font-family:'Poppins',sans-serif;
+
+font-size:22px;
+
+color:#ffffff;
+
+margin-bottom:20px;
+
+}
+
+footer p{
+
+line-height:1.9;
+
+color:#CBD5E1;
+
+}
+
+
+/* ======================================================
+   FOOTER LINKS
+====================================================== */
+
+footer ul{
+
+padding:0;
+
+}
+
+footer ul li{
+
+margin-bottom:14px;
+
+}
+
+footer ul li a{
+
+color:#CBD5E1;
+
+transition:.3s;
+
+}
+
+footer ul li a:hover{
+
+color:#38BDF8;
+
+padding-left:6px;
+
+}
+
+
+/* ======================================================
+   SOCIAL LINKS
+====================================================== */
+
+.social-links{
+
+display:flex;
+
+flex-direction:column;
+
+gap:16px;
+
+}
+
+.social-links a{
+
+display:inline-flex;
+
+align-items:center;
+
+font-weight:600;
+
+color:#CBD5E1;
+
+transition:.35s;
+
+}
+
+.social-links a:hover{
+
+color:#38BDF8;
+
+transform:translateX(8px);
+
+}
+
+
+/* ======================================================
+   COPYRIGHT
+====================================================== */
+
+footer hr{
+
+border:none;
+
+height:1px;
+
+background:rgba(255,255,255,.08);
+
+margin:35px 0;
+
+}
+
+.copyright{
+
+text-align:center;
+
+font-size:15px;
+
+color:#94A3B8;
+
+}
+
+
+/* ======================================================
+   GLOBAL HOVER EFFECTS
+====================================================== */
+
+.service-card,
+.info-card,
+.industry-card,
+.why-card,
+.value-card,
+.contact-card,
+.employer-image{
+
+transition:all .35s ease;
+
+}
+
+
+/* ======================================================
+   SELECTION COLOR
+====================================================== */
+
+::selection{
+
+background:#0B8F6A;
+
+color:#ffffff;
+
+}
+
+
+/* ======================================================
+   SCROLLBAR
+====================================================== */
+
+::-webkit-scrollbar{
+
+width:10px;
+
+}
+
+::-webkit-scrollbar-track{
+
+background:#E5E7EB;
+
+}
+
+::-webkit-scrollbar-thumb{
+
+background:#123C69;
+
+border-radius:20px;
+
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+background:#0B8F6A;
+
+}
+
+
+/* ======================================================
+   SMALL UTILITY CLASSES
+====================================================== */
+
+.text-center{
+
+text-align:center;
+
+}
+
+.mt-2{
+
+margin-top:20px;
+
+}
+
+.mt-3{
+
+margin-top:30px;
+
+}
+
+.mt-5{
+
+margin-top:50px;
+
+}
+
+.mb-2{
+
+margin-bottom:20px;
+
+}
+
+.mb-3{
+
+margin-bottom:30px;
+
+}
+
+.shadow{
+
+box-shadow:0 20px 60px rgba(15,23,42,.10);
+
+}
+
+.rounded{
+
+border-radius:24px;
+
+}/* ======================================================
+   PART 6 OF 6
+   RESPONSIVE + FINAL POLISH
+====================================================== */
+
+/* ---------- Large Screens ---------- */
+
+@media (min-width:1400px){
+
+.container{
+max-width:1320px;
+}
+
+.hero h1{
+font-size:78px;
+}
+
+.section-header h2{
+font-size:54px;
+}
+
+}
+
+
+/* ---------- Laptop ---------- */
+
+@media (max-width:1200px){
+
+.hero h1{
+font-size:58px;
+}
+
+.section-header h2{
+font-size:42px;
+}
+
+.services-grid,
+.why-grid,
+.contact-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+.industry-grid{
+grid-template-columns:repeat(3,1fr);
+}
+
+.values-grid{
+grid-template-columns:repeat(2,1fr);
+}
+
+}
+
+
+/* ---------- Tablet ---------- */
+
+@media (max-width:992px){
+
+nav{
+
+flex-direction:column;
+
+justify-content:center;
+
+height:auto;
+
+padding:20px 0;
+
+gap:20px;
+
+}
+
+.menu{
+
+flex-wrap:wrap;
+
+justify-content:center;
+
+gap:18px;
+
+}
+
+.hero{
+
+text-align:center;
+
+padding:160px 0 100px;
+
+}
+
+.hero-content{
+
+margin:auto;
+
+}
+
+.hero-buttons{
+
+justify-content:center;
+
+}
+
+.about-grid,
+.employer-grid{
+
+grid-template-columns:1fr;
+
+gap:50px;
+
+}
+
+.image-placeholder{
+
+min-height:420px;
+
+}
+
+.employer-image img{
+
+height:420px;
+
+}
+
+.footer-grid{
+
+grid-template-columns:1fr;
+
+text-align:center;
+
+}
+
+.footer-logo{
+
+margin:auto auto 20px;
+
+}
+
+.social-links{
+
+align-items:center;
+
+}
+
+}
+
+
+/* ---------- Mobile ---------- */
+
+@media (max-width:768px){
+
+.section{
+
+padding:80px 0;
+
+}
+
+.section-header{
+
+margin-bottom:45px;
+
+}
+
+.section-header h2{
+
+font-size:34px;
+
+}
+
+.hero h1{
+
+font-size:42px;
+
+}
+
+.hero p{
+
+font-size:17px;
+
+}
+
+.services-grid,
+.why-grid,
+.values-grid,
+.industry-grid,
+.contact-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.btn{
+
+width:100%;
+
+}
+
+.hero-buttons{
+
+flex-direction:column;
+
+}
+
+.logo h2{
+
+font-size:24px;
+
+}
+
+.logo img{
+
+width:48px;
+
+}
+
+.menu{
+
+gap:12px;
+
+}
+
+.menu a{
+
+font-size:15px;
+
+}
+
+.info-card,
+.service-card,
+.value-card,
+.why-card,
+.contact-card{
+
+padding:30px;
+
+}
+
+.employer-content h2{
+
+font-size:34px;
+
+}
+
+.employer-image img{
+
+height:320px;
+
+}
+
+}
+
+
+/* ---------- Small Phones ---------- */
+
+@media (max-width:480px){
+
+.container{
+
+width:92%;
+
+}
+
+.hero{
+
+padding-top:140px;
+
+}
+
+.hero h1{
+
+font-size:34px;
+
+}
+
+.hero p{
+
+font-size:16px;
+
+}
+
+.section-tag{
+
+font-size:11px;
+
+padding:8px 14px;
+
+}
+
+.section-header h2{
+
+font-size:28px;
+
+}
+
+.service-card h3,
+.info-card h3,
+.why-card h3,
+.contact-card h3{
+
+font-size:22px;
+
+}
+
+.value-card h1{
+
+font-size:48px;
+
+}
+
+.value-card h3{
+
+font-size:22px;
+
+}
+
+footer{
+
+padding-top:70px;
+
+}
+
+}
+
+
+/* ======================================================
+   SMOOTH ANIMATIONS
+====================================================== */
+
+img{
+
+transition:.45s ease;
+
+}
+
+button{
+
+transition:.35s ease;
+
+}
+
+.btn,
+.service-card,
+.info-card,
+.industry-card,
+.why-card,
+.value-card,
+.contact-card,
+.employer-image{
+
+will-change:transform;
+
+}
+
+
+/* ======================================================
+   FOCUS STATES
+====================================================== */
+
+a:focus,
+button:focus,
+input:focus,
+textarea:focus{
+
+outline:3px solid rgba(56,189,248,.35);
+
+outline-offset:4px;
+
+}
+
+
+/* ======================================================
+   PREMIUM GLASS SUPPORT
+====================================================== */
+
+.glass{
+
+background:rgba(255,255,255,.18);
+
+backdrop-filter:blur(18px);
+
+border:1px solid rgba(255,255,255,.25);
+
+}
+
+
+/* ======================================================
+   FINAL POLISH
+====================================================== */
+
+body{
+
+text-rendering:optimizeLegibility;
+
+-webkit-font-smoothing:antialiased;
+
+-moz-osx-font-smoothing:grayscale;
+
+}
+
+.section{
+
+scroll-margin-top:100px;
+
+}
+
+img{
+
+user-select:none;
+
+}
+
+.hero,
+.about,
+.services,
+.industries,
+.why,
+.values,
+.employers,
+.candidates,
+.partners,
+.contact{
+
+overflow:hidden;
+
+}
