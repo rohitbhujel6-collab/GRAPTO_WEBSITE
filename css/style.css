@@ -1,7 +1,11 @@
-/* ==========================================
-   GRAPTO V2.0
+/* =====================================================
+   GRAPTO V3
    GLOBAL STYLES
-========================================== */
+===================================================== */
+
+/* ==========================
+   RESET
+========================== */
 
 *{
     margin:0;
@@ -17,12 +21,18 @@ body{
     font-family:var(--font-family);
     background:var(--gray-50);
     color:var(--gray-900);
-    line-height:1.6;
+    line-height:1.7;
     overflow-x:hidden;
+    font-size:16px;
 }
+
+/* ==========================
+   ELEMENTS
+========================== */
 
 img{
     display:block;
+    width:100%;
     max-width:100%;
 }
 
@@ -31,33 +41,198 @@ a{
     color:inherit;
 }
 
-button,
-input{
-    font-family:inherit;
+ul{
+    list-style:none;
 }
+
+button,
+input,
+textarea{
+    font-family:inherit;
+    outline:none;
+}
+
+section{
+    position:relative;
+}
+
+/* ==========================
+   CONTAINER
+========================== */
 
 .container{
+
     width:min(92%,1200px);
+
     margin:auto;
+
 }
 
-/* ==========================================
+/* ==========================
+   COMMON SECTION
+========================== */
+
+.section{
+
+    padding:100px 0;
+
+}
+
+.light{
+
+    background:#ffffff;
+
+}
+
+/* ==========================
+   SECTION TITLE
+========================== */
+
+.section-title{
+
+    text-align:center;
+
+    margin-bottom:70px;
+
+}
+
+.section-title span{
+
+    display:inline-block;
+
+    color:var(--primary);
+
+    font-size:14px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+
+    margin-bottom:15px;
+
+}
+
+.section-title h2{
+
+    font-size:46px;
+
+    line-height:1.2;
+
+    color:var(--secondary);
+
+    margin-bottom:20px;
+
+    font-weight:800;
+
+}
+
+.section-title p{
+
+    max-width:760px;
+
+    margin:auto;
+
+    color:var(--gray-600);
+
+    font-size:18px;
+
+}
+
+/* ==========================
+   BUTTONS
+========================== */
+
+.btn{
+
+    display:inline-flex;
+
+    align-items:center;
+
+    justify-content:center;
+
+    padding:16px 34px;
+
+    border-radius:999px;
+
+    font-weight:600;
+
+    cursor:pointer;
+
+    transition:.35s ease;
+
+    border:none;
+
+    font-size:15px;
+
+}
+
+.btn-primary{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+}
+
+.btn-primary:hover{
+
+    background:var(--primary-dark);
+
+    transform:translateY(-3px);
+
+    box-shadow:0 18px 40px rgba(37,99,235,.25);
+
+}
+
+.btn-outline{
+
+    border:2px solid var(--primary);
+
+    background:#ffffff;
+
+    color:var(--primary);
+
+}
+
+.btn-outline:hover{
+
+    background:var(--primary);
+
+    color:#ffffff;
+
+    transform:translateY(-3px);
+
+}
+
+/* ==========================
    HEADER
-========================================== */
+========================== */
 
 .header{
+
     position:sticky;
+
     top:0;
-    left:0;
+
     width:100%;
+
     background:#ffffff;
+
     z-index:999;
-    box-shadow:0 3px 18px rgba(0,0,0,.06);
+
+    box-shadow:0 5px 25px rgba(0,0,0,.05);
+
 }
+
+/* ==========================
+   NAVBAR
+========================== */
 
 .nav{
 
-    min-height:90px;
+    min-height:92px;
 
     display:flex;
 
@@ -65,13 +240,13 @@ input{
 
     justify-content:space-between;
 
-    gap:30px;
+    gap:35px;
 
 }
 
-/* ==========================================
+/* ==========================
    LOGO
-========================================== */
+========================== */
 
 .logo{
 
@@ -79,43 +254,29 @@ input{
 
     align-items:center;
 
-    gap:14px;
+    gap:15px;
 
     flex-shrink:0;
-
-    min-width:250px;
 
 }
 
 .logo-img{
 
-    width:56px;
+    width:58px;
 
-    height:56px;
+    height:58px;
 
-    border-radius:12px;
-
-    background:#eef4ff;
-
-    object-fit:cover;
-
-}
-
-.logo-content{
-
-    display:flex;
-
-    flex-direction:column;
+    object-fit:contain;
 
 }
 
 .logo-content h2{
 
-    font-size:28px;
-
-    font-weight:800;
+    font-size:30px;
 
     color:var(--primary);
+
+    font-weight:800;
 
     line-height:1;
 
@@ -123,33 +284,37 @@ input{
 
 .logo-content p{
 
-    margin-top:6px;
+    margin-top:5px;
+
+    color:var(--gray-500);
 
     font-size:13px;
-
-    color:var(--gray-600);
 
     white-space:nowrap;
 
 }
 
-/* ==========================================
+/* ==========================
    NAVIGATION
-========================================== */
+========================== */
 
 .navigation{
 
-    flex:1;
-
     display:flex;
 
+    align-items:center;
+
     justify-content:center;
+
+    flex:1;
 
     gap:28px;
 
 }
 
 .navigation a{
+
+    position:relative;
 
     font-size:15px;
 
@@ -167,546 +332,644 @@ input{
 
 }
 
-.nav-buttons{
+.navigation a::after{
 
-    display:flex;
+    content:"";
 
-    gap:12px;
+    position:absolute;
 
-    flex-shrink:0;
-
-}
-
-/* ==========================================
-   BUTTONS
-========================================== */
-
-.btn{
-
-    display:inline-flex;
-
-    align-items:center;
-
-    justify-content:center;
-
-    padding:14px 28px;
-
-    border:none;
-
-    border-radius:999px;
-
-    font-weight:600;
-
-    cursor:pointer;
-
-    transition:.3s;
-
-}
-
-.btn-primary{
-
-    background:var(--primary);
-
-    color:#fff;
-
-}
-
-.btn-primary:hover{
-
-    transform:translateY(-2px);
-
-    background:var(--primary-dark);
-
-}
-
-.btn-outline{
-
-    border:2px solid var(--primary);
-
-    background:#fff;
-
-    color:var(--primary);
-
-}
-
-.btn-outline:hover{
-
-    background:var(--primary);
-
-    color:#fff;
-
-}
-
-/* ==========================================
-   HERO
-========================================== */
-
-.hero{
-
-    position:relative;
-
-    background:linear-gradient(135deg,#eef5ff,#ffffff);
-
-    padding:80px 0 100px;
-
-}
-
-.hero-banner{
-
-    display:none;
-
-}
-
-.hero-content{
-
-    max-width:900px;
-
-    margin:auto;
-
-    text-align:center;
-
-}
-
-.hero h1{
-
-    font-size:clamp(46px,6vw,72px);
-
-    line-height:1.15;
-
-    margin-bottom:25px;
-
-    font-weight:800;
-
-    color:var(--secondary);
-
-}
-
-.hero h1 span{
-
-    color:var(--primary);
-
-}
-
-.hero p{
-
-    max-width:760px;
-
-    margin:0 auto 45px;
-
-    font-size:20px;
-
-    color:var(--gray-600);
-
-}
-
-/* ==========================================
-   SEARCH
-========================================== */
-
-.search-box{
-
-    display:grid;
-
-    grid-template-columns:1fr 1fr auto;
-
-    gap:18px;
-
-    padding:20px;
-
-    background:#fff;
-
-    border-radius:18px;
-
-    box-shadow:var(--shadow-lg);
-
-}
-
-.search-box input{
-
-    padding:16px;
-
-    border:1px solid var(--gray-200);
-
-    border-radius:12px;
-
-    font-size:15px;
-
-}
-
-.search-box input:focus{
-
-    border-color:var(--primary);
-
-}
-
-/* ==========================
-   STATS
-========================== */
-
-.stats{
-    padding:80px 0;
-    background:#ffffff;
-}
-
-.stats-grid{
-    display:grid;
-    grid-template-columns:repeat(4,1fr);
-    gap:25px;
-}
-
-.stat-card{
-    background:#fff;
-    padding:35px 25px;
-    border-radius:20px;
-    text-align:center;
-    box-shadow:var(--shadow-sm);
-    transition:.3s;
-    border:1px solid var(--gray-100);
-}
-
-.stat-card:hover{
-    transform:translateY(-8px);
-    box-shadow:var(--shadow-lg);
-}
-
-.stat-card h2{
-    font-size:42px;
-    color:var(--primary);
-    margin-bottom:12px;
-}
-
-.stat-card p{
-    color:var(--gray-600);
-    font-weight:500;
-}
-
-/* ==========================
-   SECTIONS
-========================== */
-
-.section{
-    padding:100px 0;
-}
-
-.light{
-    background:#ffffff;
-}
-
-.section-title{
-    text-align:center;
-    margin-bottom:60px;
-}
-
-.section-title h2{
-    font-size:42px;
-    color:var(--secondary);
-    margin-bottom:15px;
-}
-
-.section-title p{
-    max-width:720px;
-    margin:auto;
-    color:var(--gray-600);
-    line-height:1.8;
-}
-
-/* ==========================
-   CARDS
-========================== */
-
-.cards-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-.card{
-
-    background:#fff;
-
-    border-radius:20px;
-
-    overflow:hidden;
-
-    box-shadow:var(--shadow-sm);
-
-    transition:.3s;
-
-}
-
-.card:hover{
-
-    transform:translateY(-10px);
-
-    box-shadow:var(--shadow-lg);
-
-}
-
-.card-image{
-
-    height:220px;
-
-    background:var(--primary-light);
-
-}
-
-.card-content{
-
-    padding:30px;
-
-}
-
-.card-content h3{
-
-    margin-bottom:15px;
-
-    color:var(--secondary);
-
-}
-
-.card-content p{
-
-    color:var(--gray-600);
-
-}
-
-/* ==========================
-   WHY CHOOSE
-========================== */
-
-.feature-grid{
-
-    display:grid;
-
-    grid-template-columns:repeat(3,1fr);
-
-    gap:30px;
-
-}
-
-.feature-card{
-
-    background:#fff;
-
-    padding:35px;
-
-    border-radius:20px;
-
-    box-shadow:var(--shadow-sm);
-
-    transition:.3s;
-
-    border:1px solid var(--gray-100);
-
-}
-
-.feature-card:hover{
-
-    transform:translateY(-8px);
-
-    box-shadow:var(--shadow-lg);
-
-}
-
-.feature-card h3{
-
-    margin-bottom:15px;
-
-    color:var(--secondary);
-
-}
-
-.feature-card p{
-
-    color:var(--gray-600);
-
-}
-
-/* ==========================
-   CTA
-========================== */
-
-.cta{
-
-    padding:110px 0;
-
-    text-align:center;
-
-    background:linear-gradient(135deg,var(--primary),var(--primary-dark));
-
-    color:#fff;
-
-}
-
-.cta h2{
-
-    font-size:48px;
-
-    margin-bottom:20px;
-
-}
-
-.cta p{
-
-    max-width:720px;
-
-    margin:auto;
-
-    margin-bottom:40px;
-
-    opacity:.95;
-
-}
-
-/* ==========================
-   FOOTER
-========================== */
-
-.footer{
-
-    background:var(--secondary);
-
-    color:#fff;
-
-    text-align:center;
-
-    padding:70px 0;
-
-}
-
-.footer-logo{
-
-    font-size:32px;
-
-    font-weight:800;
-
-    margin-bottom:20px;
-
-}
-
-.footer-links{
-
-    display:flex;
-
-    justify-content:center;
-
-    gap:30px;
-
-    margin:30px 0;
-
-}
-/* ==========================================
-   HEADER IMPROVEMENTS
-========================================== */
-
-.header{
-    width:100%;
-    background:#ffffff;
-    position:sticky;
-    top:0;
     left:0;
-    z-index:999;
-}
 
-.nav{
-    display:flex;
-    align-items:center;
-    justify-content:space-between;
-    gap:30px;
-    min-height:90px;
-}
+    bottom:-8px;
 
-.logo{
-    display:flex;
-    align-items:center;
-    gap:12px;
-    flex-shrink:0;
-    font-size:28px;
-    font-weight:800;
-    color:var(--primary);
-}
+    width:0;
 
-.logo img{
-    width:52px;
-    height:52px;
-    object-fit:contain;
-}
+    height:2px;
 
-.navigation{
-    flex:1;
-    display:flex;
-    justify-content:center;
-    gap:35px;
-}
+    background:var(--primary);
 
-.nav-buttons{
-    flex-shrink:0;
-}
-
-/* ==========================================
-   HERO IMPROVEMENTS
-========================================== */
-
-.hero{
-
-    position:relative;
-
-    overflow:hidden;
-
-    padding:90px 0 80px;
-
-    min-height:650px;
-
-    display:flex;
-
-    align-items:center;
+    transition:.3s;
 
 }
 
-.hero-content{
+.navigation a:hover::after{
 
     width:100%;
 
-    max-width:1100px;
+}
 
-    margin:auto;
+/* ==========================
+   NAV BUTTONS
+========================== */
 
-    text-align:center;
+.nav-buttons{
 
-    position:relative;
+    display:flex;
 
-    z-index:2;
+    align-items:center;
+
+    gap:14px;
+
+    flex-shrink:0;
 
 }
 
-.hero h1{
+.nav-buttons .btn{
 
-    max-width:950px;
+    padding:13px 24px;
 
-    margin:0 auto 30px;
+}<!-- ========================================= -->
+<!-- ABOUT GRAPTO -->
+<!-- ========================================= -->
 
-    font-size:clamp(46px,5vw,72px);
+<section id="about" class="about section">
 
-    line-height:1.15;
+    <div class="container">
 
-}
+        <div class="section-header">
+            <span class="section-tag">ABOUT US</span>
+            <h2>Building Stronger Businesses Through Better Talent.</h2>
+            <p>
+                GRAPTO is a recruitment and workforce solutions company
+                operating remotely from Siliguri, West Bengal. We help
+                businesses hire the right talent while helping professionals
+                build meaningful careers.
+            </p>
+        </div>
 
-.hero p{
+        <div class="about-grid">
 
-    max-width:760px;
+            <div class="about-content">
 
-    margin:0 auto 45px;
+                <div class="info-card">
+                    <h3>Our Mission</h3>
+                    <p>
+                        Deliver reliable recruitment, staffing and workforce
+                        solutions through innovation, trust and long-term
+                        partnerships.
+                    </p>
+                </div>
 
-}
+                <div class="info-card">
+                    <h3>Our Vision</h3>
+                    <p>
+                        To become India's most trusted workforce solutions
+                        partner for businesses of every size.
+                    </p>
+                </div>
 
-.search-box{
+            </div>
 
-    max-width:1000px;
+            <div class="image-placeholder">
 
-    margin:auto;
+                <img src="assets/images/about-placeholder.jpg"
+                     alt="About GRAPTO">
 
-}
+                <div class="admin-note">
+                    Future Admin Upload
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- ========================================= -->
+<!-- SERVICES -->
+<!-- ========================================= -->
+
+<section id="services" class="services section">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+OUR SERVICES
+</span>
+
+<h2>
+Helping Businesses Build Better Teams
+</h2>
+
+</div>
+
+<div class="services-grid">
+
+<div class="service-card">
+
+<h3>Recruitment</h3>
+
+<p>
+Permanent hiring solutions across multiple industries.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>Staffing Solutions</h3>
+
+<p>
+Temporary, contractual and project-based workforce support.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>HR Support</h3>
+
+<p>
+Hiring assistance, onboarding and workforce coordination.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>Business Operations</h3>
+
+<p>
+Operational workforce planning and execution support.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>Growth Partnerships</h3>
+
+<p>
+Helping organizations scale through strategic hiring.
+</p>
+
+</div>
+
+<div class="service-card">
+
+<h3>Workforce Consulting</h3>
+
+<p>
+Customized hiring strategies designed for your business.
+</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+
+<!-- ========================================= -->
+<!-- INDUSTRIES -->
+<!-- ========================================= -->
+
+<section id="industries" class="industries section">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+
+INDUSTRIES
+
+</span>
+
+<h2>
+
+Industries We Serve
+
+</h2>
+
+</div>
+
+<div class="industry-grid">
+
+<div class="industry-card">Retail</div>
+
+<div class="industry-card">Logistics</div>
+
+<div class="industry-card">Manufacturing</div>
+
+<div class="industry-card">Hospitality</div>
+
+<div class="industry-card">Healthcare</div>
+
+<div class="industry-card">Education</div>
+
+<div class="industry-card">IT Services</div>
+
+<div class="industry-card">E-Commerce</div>
+
+</div>
+
+<p class="future-note">
+
+Industry images will later be uploaded through the Admin Panel.
+
+</p>
+
+</div>
+
+</section><!-- ========================================= -->
+<!-- WHY CHOOSE GRAPTO -->
+<!-- ========================================= -->
+
+<section id="why" class="why section">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+WHY CHOOSE US
+</span>
+
+<h2>
+Why Businesses Choose GRAPTO
+</h2>
+
+<p>
+We combine industry knowledge, strategic hiring, and long-term partnerships
+to help organizations build exceptional teams.
+</p>
+
+</div>
+
+<div class="why-grid">
+
+<div class="why-card">
+<h3>Fast Hiring</h3>
+<p>Quick turnaround with quality candidate sourcing.</p>
+</div>
+
+<div class="why-card">
+<h3>Verified Talent</h3>
+<p>Professionals carefully shortlisted for your requirements.</p>
+</div>
+
+<div class="why-card">
+<h3>Dedicated Support</h3>
+<p>Personalized assistance throughout the hiring journey.</p>
+</div>
+
+<div class="why-card">
+<h3>Long-Term Partnership</h3>
+<p>We focus on relationships, not just placements.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CORE VALUES -->
+<!-- ========================================= -->
+
+<section id="values" class="values section">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+OUR VALUES
+</span>
+
+<h2>
+The Meaning Behind GRAPTO
+</h2>
+
+</div>
+
+<div class="values-grid">
+
+<div class="value-card">
+<h1>G</h1>
+<h3>Growth</h3>
+<p>Creating opportunities for businesses and professionals.</p>
+</div>
+
+<div class="value-card">
+<h1>R</h1>
+<h3>Respect</h3>
+<p>Building relationships based on trust and integrity.</p>
+</div>
+
+<div class="value-card">
+<h1>A</h1>
+<h3>Accountability</h3>
+<p>Owning every commitment with professionalism.</p>
+</div>
+
+<div class="value-card">
+<h1>P</h1>
+<h3>Professionalism</h3>
+<p>Delivering quality services with consistency.</p>
+</div>
+
+<div class="value-card">
+<h1>T</h1>
+<h3>Trust</h3>
+<p>Strengthening partnerships through transparency.</p>
+</div>
+
+<div class="value-card">
+<h1>O</h1>
+<h3>Ownership</h3>
+<p>Taking responsibility for every client's success.</p>
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- EMPLOYERS -->
+<!-- ========================================= -->
+
+<section id="employers" class="employers section">
+
+<div class="container employer-grid">
+
+<div class="employer-image">
+
+<a href="#" id="clientFormLink">
+
+<img src="assets/images/employer-placeholder.jpg"
+alt="Employers">
+
+</a>
+
+<p class="admin-note">
+Future Admin Upload
+</p>
+
+</div>
+
+<div class="employer-content">
+
+<span class="section-tag">
+FOR EMPLOYERS
+</span>
+
+<h2>
+Looking for the Right Talent?
+</h2>
+
+<p>
+From permanent recruitment to workforce solutions,
+GRAPTO helps businesses build stronger teams with confidence.
+</p>
+
+<a href="#" id="clientFormButton" class="btn btn-primary">
+Hire Talent
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CANDIDATES -->
+<!-- ========================================= -->
+
+<section id="candidates" class="candidates section">
+
+<div class="container employer-grid">
+
+<div class="employer-content">
+
+<span class="section-tag">
+FOR CANDIDATES
+</span>
+
+<h2>
+Find Your Next Career Opportunity
+</h2>
+
+<p>
+Join the GRAPTO Talent Network and discover opportunities
+that match your skills and ambitions.
+</p>
+
+<a href="#" id="candidateFormButton" class="btn btn-primary">
+Join Talent Network
+</a>
+
+</div>
+
+<div class="employer-image">
+
+<a href="#" id="candidateFormLink">
+
+<img src="assets/images/candidate-placeholder.jpg"
+alt="Candidates">
+
+</a>
+
+<p class="admin-note">
+Future Admin Upload
+</p>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- PARTNERS -->
+<!-- ========================================= -->
+
+<section id="partners" class="partners section">
+
+<div class="container employer-grid">
+
+<div class="employer-image">
+
+<a href="#" id="partnerFormLink">
+
+<img src="assets/images/partner-placeholder.jpg"
+alt="Partners">
+
+</a>
+
+<p class="admin-note">
+Future Admin Upload
+</p>
+
+</div>
+
+<div class="employer-content">
+
+<span class="section-tag">
+PARTNERS
+</span>
+
+<h2>
+Partner With GRAPTO
+</h2>
+
+<p>
+Collaborate with us to expand opportunities,
+deliver workforce excellence,
+and build long-term business success.
+</p>
+
+<a href="#" id="partnerFormButton" class="btn btn-primary">
+Become a Partner
+</a>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- CONTACT -->
+<!-- ========================================= -->
+
+<section id="contact" class="contact section">
+
+<div class="container">
+
+<div class="section-header">
+
+<span class="section-tag">
+CONTACT
+</span>
+
+<h2>
+Let's Connect
+</h2>
+
+</div>
+
+<div class="contact-grid">
+
+<div class="contact-card">
+
+<h3>Operating Location</h3>
+
+<p>
+📍 Operating Remotely
+<br>
+Siliguri, West Bengal, India
+</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>Email</h3>
+
+<p>info@grapto.in</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>Phone</h3>
+
+<p>+91 XXXXX XXXXX</p>
+
+</div>
+
+<div class="contact-card">
+
+<h3>Business Hours</h3>
+
+<p>Monday – Saturday<br>9:00 AM – 6:00 PM</p>
+
+</div>
+
+</div>
+
+</div>
+
+</section>
+
+<!-- ========================================= -->
+<!-- FOOTER -->
+<!-- ========================================= -->
+
+<footer>
+
+<div class="container">
+
+<div class="footer-grid">
+
+<div>
+
+<img src="assets/images/logo.png" alt="GRAPTO Logo" class="footer-logo">
+
+<p>
+People. Partnerships. Progress.
+</p>
+
+</div>
+
+<div>
+
+<h4>Quick Links</h4>
+
+<ul>
+<li><a href="#about">About</a></li>
+<li><a href="#services">Services</a></li>
+<li><a href="#industries">Industries</a></li>
+<li><a href="#contact">Contact</a></li>
+</ul>
+
+</div>
+
+<div>
+
+<h4>Follow Us</h4>
+
+<div class="social-links">
+
+<a href="#" id="linkedinLink">LinkedIn</a>
+
+<a href="#" id="facebookLink">Facebook</a>
+
+<a href="#" id="instagramLink">Instagram</a>
+
+<a href="#" id="youtubeLink">YouTube</a>
+
+</div>
+
+</div>
+
+</div>
+
+<hr>
+
+<p class="copyright">
+
+© 2026 GRAPTO. All Rights Reserved.
+
+</p>
+
+</div>
+
+</footer>
+
+</body>
+
+</html>
